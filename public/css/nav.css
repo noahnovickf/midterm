@@ -1,14 +1,21 @@
-/* Section Navbar */
+/* Section Nav Bar */
+
+body {
+  font-family: Muli;
+}
 
 nav {
+  background: #333;
   display: flex;
   position: sticky;
+  height: 110px;
+  width: 100%;
   top: 0;
-  background: #333;
   color: #fff;
   justify-content: space-between;
   z-index: 1;
   padding: 1rem;
+  align-items: center;
 }
 
 nav .middle-buttons,
@@ -17,6 +24,7 @@ nav .right-buttons {
   align-items: center;
   justify-content: center;
   align-content: center;
+  vertical-align: center;
   list-style: none;
 }
 
