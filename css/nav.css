@@ -1,2 +1,29 @@
 /* Section Navbar */
 
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+}
+
+nav .middle-buttons,
+nav .right-buttons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav .middle-buttons li,
+nav .right-buttons li {
+  padding: 0 1rem;
+}
+
+nav .middle-buttons a:hover,
+nav .right-buttons a:hover {
+  cursor: pointer;
+}
