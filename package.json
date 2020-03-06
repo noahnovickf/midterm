@@ -1,0 +1,23 @@
+{
+  "name": "midterm-buy-sell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahnovickf/Midterm-BuySell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahnovickf/Midterm-BuySell/issues"
+  },
+  "homepage": "https://github.com/noahnovickf/Midterm-BuySell#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.18.2"
+  }
+}
