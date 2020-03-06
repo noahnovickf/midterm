@@ -1,0 +1,26 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.img {
+  flex: 30%;
+  padding: 5px;
+}
+
+.head .img {
+  max-width: 31em;
+  max-height: 31em;
+}
+
+#img5 {
+  max-width: 34em;
+  max-height: 34em;
+}
+
+#img9 {
+  max-width: 30em;
+  max-height: 30em;
+}
