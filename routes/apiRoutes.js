@@ -6,7 +6,7 @@ module.exports = db => {
     db.getFeaturedBikes()
       .then(bikes => {
         res.json({ bikes });
-        console.log(bikes);
+        //console.log(bikes);
       })
       .catch(error => res.status(500).json({ error }));
   });
