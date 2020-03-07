@@ -1,4 +1,4 @@
-import { Pool } from "pg";
+const { Pool } = require("pg");
 
 const pool = new Pool({
   user: "user",
@@ -30,11 +30,7 @@ const addListing = bike => {
 
 const getFeaturedBikes = () => {
   return pool
-    .query(
-      `
-  SELECT * FROM bikes WHERE featured = true
-  `
-    )
+    .query(`SELECT * FROM bikes WHERE featured = true`)
     .then(res => res.rows);
 };
 
@@ -60,8 +56,7 @@ const filterBikes = options => {
     queryString += `AND price <$${queryParams.length}`;
   }
 
-  return pool.query(`
-  `);
+  return pool.query(queryString, queryParams).then(res => res.rows);
 };
 
 const favouriteBike = ids => {
@@ -83,4 +78,24 @@ const getFavouriteBikes = user => {
       [user.user_id]
     )
     .then(res => res.rows);
+};
+
+const deleteListing = bike => {
+  return (
+    pool.query(`
+  DELETE from bikes 
+  where bike_id =  $1
+  `),
+    [bike]
+  );
+};
+
+module.exports = {
+  deleteListing,
+  getFavouriteBikes,
+  favouriteBike,
+  filterBikes,
+  getFeaturedBikes,
+  addListing,
+  getAllBikes
 };

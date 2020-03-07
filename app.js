@@ -1,18 +1,14 @@
 const express = require("express");
-const PORT = 8080;
 const app = express();
+const port = 3000;
+const db = require("./database");
+
+const apiRouter = require("./routes/apiRoutes");
+
+app.use("/api", apiRouter(db));
 
 app.use(express.static("public"));
 
-// Seperated Routes
-const root = require('./routes/root')();
+//app.get("/", (req, res) => {});
 
-// app.use('/', root);
-
-app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
-});
-
-exports.module = {
-  express
-}
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
