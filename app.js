@@ -1,18 +1,13 @@
 const express = require("express");
-const PORT = 8080;
 const app = express();
-
+const port = 3000;
+const { getFeaturedBikes } = require("./database");
+//const rootRouter = require("./routes/root");
+//app.use(rootRouter);
 app.use(express.static("public"));
 
-// Seperated Routes
-const root = require('./routes/root')();
-
-// app.use('/', root);
-
-app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
+app.get("/", (req, res) => {
+  getFeaturedBikes();
 });
 
-exports.module = {
-  express
-}
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
