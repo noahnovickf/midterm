@@ -1,29 +1,58 @@
-/* Section Navbar */
+/* Section Nav Bar */
 
 nav {
-  display: flex;
-  position: sticky;
-  top: 0;
   background: #333;
   color: #fff;
-  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 110px;
+  width: 100%;
   z-index: 1;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-logo {
+  font-size: 2.5rem;
+  padding-left: 0.75rem;
+}
+
+nav .nav-logo span {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f4f4f4;
+}
+
+
+nav .nav-logo i {
+  font-size: 2.5rem;
+  padding-left: 0.5rem;
 }
 
 nav .middle-buttons,
 nav .right-buttons {
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style: none;
 }
 
-nav .middle-buttons li,
-nav .right-buttons li {
-  padding: 0 1rem;
+nav .middle-buttons li a,
+nav .right-buttons li a{
+  padding: 1.5rem 1rem;
+  font-size: 1.7rem;
+  border-radius: 5px;
+}
+
+nav .right-buttons li a {
+  margin-right: 1.5rem;
 }
 
 nav .middle-buttons a:hover,
 nav .right-buttons a:hover {
+  background: #d4d4d4;
+  color: #333;
   cursor: pointer;
 }

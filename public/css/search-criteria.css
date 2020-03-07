@@ -1,0 +1,11 @@
+#search-criteria {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+#search-criteria .dropdowns .btn-group{
+  margin: 0 1.5rem;
+}

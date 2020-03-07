@@ -30,12 +30,8 @@ const addListing = bike => {
 
 const getFeaturedBikes = () => {
   return pool
-    .query(
-      `
-  SELECT * FROM bikes WHERE featured = true
-  `
-    )
-    .then(res => console.log(res.rows));
+    .query(`SELECT * FROM bikes WHERE featured = true`)
+    .then(res => res.rows);
 };
 
 const getAllBikes = () => {

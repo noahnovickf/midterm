@@ -24,3 +24,11 @@
   max-width: 30em;
   max-height: 30em;
 }
+.card {
+  width: 31em;
+}
+.card-body {
+  border-top: 2px solid #333;
+  background: #f4f4f4;
+  padding: 1.5rem;
+}
