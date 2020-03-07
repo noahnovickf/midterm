@@ -5,6 +5,10 @@
   font-size: 16px;
 }
 
+body {
+  font-family: Muli, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
