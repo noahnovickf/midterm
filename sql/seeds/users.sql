@@ -6,4 +6,6 @@ INSERT INTO users (email) values('nnovickfaille1@gmail.com'),
 ('david.he07@gmail.com'),
 ('kguertin90@gmail.com');
 
+-- INSERT INTO favourites(user_id, bike_id) values ('6','55')\q
+
 -- INSERT INTO favourites(user_id, bike_id) values ('6','55')
