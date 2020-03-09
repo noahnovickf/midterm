@@ -1,4 +1,20 @@
-.head {
+#bikeDisplay {
+  column-count: 3;
+  column-gap: 3rem;
+} 
+
+.card {
+  display: inline-block;
+  width: 30em;
+}
+
+.card-body {
+  border-top: 2px solid #333;
+  background: #f4f4f4;
+  padding: 1.5rem;
+}
+
+/* .head {
   display: flex;
   /* flex-wrap: wrap;
   justify-content: center;
@@ -13,22 +29,5 @@
 .head .img {
   max-width: 31em;
   max-height: 31em;
-}
+} */
 
-#img5 {
-  max-width: 34em;
-  max-height: 34em;
-}
-
-#img9 {
-  max-width: 30em;
-  max-height: 30em;
-}
-.card {
-  width: 31em;
-}
-.card-body {
-  border-top: 2px solid #333;
-  background: #f4f4f4;
-  padding: 1.5rem;
-}
