@@ -1,7 +1,6 @@
 $(() => {
   // const featuredBikes = $;
-  $.ajax({ url: "/api", method: "GET" }).then(res => {
-    //console.log(res);
+  $.ajax({ url: "/api/allbikes", method: "GET" }).then(res => {
     return renderBikes(res);
   });
 });
@@ -9,9 +8,7 @@ $(() => {
 const renderBikes = res => {
   $("#bikeDisplay").empty();
   for (let bike of res.bikes) {
-    if (bike.featured === true) {
-      $("#bikeDisplay").prepend(createBikeCard(bike));
-    }
+    $("#bikeDisplay").prepend(createBikeCard(bike));
   }
 };
 const createBikeCard = bike => {
