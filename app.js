@@ -6,7 +6,7 @@ const db = require("./database");
 const apiRouter = require("./routes/apiRoutes");
 
 app.use("/api", apiRouter(db));
-
+app.use("/api/allbikes", apiRouter(db));
 app.use(express.static("public"));
 
 //app.get("/", (req, res) => {});
