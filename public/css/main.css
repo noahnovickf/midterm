@@ -1,8 +1,8 @@
 .head {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-content: center; */
 }
 
 .img {

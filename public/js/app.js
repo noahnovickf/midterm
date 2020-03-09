@@ -16,8 +16,8 @@ const renderBikes = res => {
 };
 const createBikeCard = bike => {
   //console.log(bike.image_url);
-  let card = $('<div class="card">');
-  const html = `    <img src='${bike.image_url}' class="card-img-top" alt="Bike image" />
+  let card = $('<div class="card img">');
+  const html = `<img src='${bike.image_url}' class="card-img-top" alt="Bike image" />
   <div class="card-body">
   <h5 class="card-title">${bike.title}</h5>
     <h6>$${bike.price}</h6>
