@@ -7,7 +7,24 @@ const pool = new Pool({
   database: "midterm"
 });
 
+const getFeaturedBikes = () => {
+  return pool
+    .query(`SELECT * FROM bikes WHERE featured = true`)
+    .then(res => res.rows);
+};
+
+const getAllBikes = () => {
+  return pool
+    .query(
+      `
+  SELECT * FROM bikes;
+  `
+    )
+    .then(res => res.rows);
+};
+
 const addListing = bike => {
+  //LIGHTBNB
   return pool
     .query(
       `INSERT INTO bikes (user_id, title, description, image_url, price, category, discipline, featured)
@@ -28,23 +45,8 @@ const addListing = bike => {
     .then(res => res.rows[0]);
 };
 
-const getFeaturedBikes = () => {
-  return pool
-    .query(`SELECT * FROM bikes WHERE featured = true`)
-    .then(res => res.rows);
-};
-
-const getAllBikes = () => {
-  return pool
-    .query(
-      `
-  SELECT * FROM bikes;
-  `
-    )
-    .then(res => res.rows);
-};
-
-const filterBikes = options => {
+const filterBikesPrice = options => {
+  //LIGHTBNB
   const queryParams = [];
   let queryString = `SELECT * FROM bikes WHERE 1=1`;
   if (options.minimum_price) {
@@ -70,23 +72,42 @@ const favouriteBike = ids => {
 };
 
 const getFavouriteBikes = user => {
+  //tiny app CURRENT USER FUNCTION
   return pool
     .query(
       `SELECT * from favourites
     WHERE user_id = $1
     `,
-      [user.user_id]
+      [user_id]
     )
     .then(res => res.rows);
 };
 
 const deleteListing = bike => {
+  //tiny app
   return (
     pool.query(`
   DELETE from bikes 
   where bike_id =  $1
   `),
-    [bike]
+    [bike.bike]
+  );
+};
+
+const filterType = category => {
+  //same as price
+  return (
+    pool.query(`SELECT * FROM bikes where category = '$1'
+  `),
+    [category.category]
+  );
+};
+
+const filterDiscipline = discipline => {
+  return (
+    pool.query(`SELECT * FROM bikes where category = '$1'
+  `),
+    [discipline]
   );
 };
 
@@ -94,8 +115,10 @@ module.exports = {
   deleteListing,
   getFavouriteBikes,
   favouriteBike,
-  filterBikes,
+  filterBikesPrice,
   getFeaturedBikes,
   addListing,
-  getAllBikes
+  getAllBikes,
+  filterDiscipline,
+  filterType
 };
