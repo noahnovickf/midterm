@@ -2,8 +2,8 @@ const db = require("./database");
 
 const login = email => {
   for (let key in db.users) {
-    if (email === users[key].email) {
-      return true;
+    if (email === db.users[key].email) {
+      return email;
     }
   }
 };

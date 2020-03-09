@@ -1,8 +1,13 @@
 $(() => {
   $("#login-form").on("submit", e => {
     e.preventDefault();
-    $.ajax({ url: "/api/login", method: "POST" }).then(res => {
-      console.log("it works");
+    console.log($("#login-form").serialize());
+    $.ajax({
+      url: "/api/login",
+      method: "POST",
+      data: $("#login-form").serialize()
+    }).then(res => {
+      $("#login-form").css({ display: "none" });
     });
   });
 });
