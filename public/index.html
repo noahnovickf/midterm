@@ -20,8 +20,11 @@
     ></script>
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/eventHandler.js"></script>
+    <script src="./js/event-handlers/allbikes.js"></script>
+    <script src="./js/event-handlers/login.js"></script>
+    <script src="./js/event-handlers/featured.js"></script>
+    <script src="./js/event-handlers/filterprice.js"></script>
+    <script src="./js/event-handlers/filtertype.js"></script>
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -53,7 +56,12 @@
         <li><button class="post-ad-btn">Post Ad</button></li>
       </ul>
       <ul class="right-buttons">
-        <li><button class="login-btn">Login</button></li>
+        <li>
+          <form id="login-form" action="/login" method="POST">
+            <input type="text" name="username" placeholder="email" />
+            <button class="login-btn">Login</button>
+          </form>
+        </li>
       </ul>
     </nav>
     <header id="showcase">
@@ -91,17 +99,20 @@
           <label for="min-price">Min Price</label>
           <input type="number" name="min-price" id="min-price" />
           <label for="max-price">Max Price</label>
+          <input type="number" name="max-price" id="max-price" /><button
+            class="submit-price-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+
           <input type="number" name="max-price" id="max-price" />
         </form>
       </div>
     </section>
     <!-- Page-specific (main) content here -->
-    <main id="bikeDisplay" class="container">
-      
-    </main>
-    <div class="head">
-
-    </div>
+    <main id="bikeDisplay" class="container"></main>
+    <div class="head"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
