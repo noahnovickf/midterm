@@ -12,13 +12,9 @@ module.exports = db => {
       .catch(error => res.status(500).json({ error }));
   });
 
-  router.get("/allbikes", (req, res) => {
-    db.getAllBikes()
-      .then(bikes => {
-        console.log("hi");
-        res.json({ bikes });
-      })
-      .catch(error => res.status(500).json({ error }));
+  router.post("/login", (req, res) => {
+    res.cookie("username", "Username");
+    res.send("ok");
   });
 
   router.get("/favourites", (req, res) => {
@@ -52,7 +48,5 @@ module.exports = db => {
 
   return router;
 };
-
-router.get("/login", (req, res) => {});
 
 router.get("/logout", (req, res) => {});

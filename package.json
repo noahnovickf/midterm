@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/noahnovickf/Midterm-BuySell#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^7.18.2"
