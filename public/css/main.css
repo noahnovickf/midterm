@@ -6,6 +6,7 @@
 .card {
   display: inline-block;
   width: 30em;
+  border: none;
 }
 
 .card-body {
