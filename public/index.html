@@ -19,8 +19,11 @@
     ></script>
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/eventHandler.js"></script>
+    <script src="./js/event-handlers/allbikes.js"></script>
+    <script src="./js/event-handlers/login.js"></script>
+    <script src="./js/event-handlers/featured.js"></script>
+    <script src="./js/event-handlers/filterprice.js"></script>
+    <script src="./js/event-handlers/filtertype.js"></script>
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -35,7 +38,7 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <!-- app JS -->
     <link rel="stylesheet" href=".//css/search-criteria.css" type="text/css" />
-   
+
     <title>Full Cycle</title>
   </head>
   <body>
@@ -47,11 +50,16 @@
       </h2>
       <ul class="middle-buttons">
         <li><button class="favourites-btn">Favourites</button></li>
-        <li><button class='messages-btn'>Messages</button></li>
-        <li><button class='post-ad-btn'> Post Ad </button></li>
+        <li><button class="messages-btn">Messages</button></li>
+        <li><button class="post-ad-btn">Post Ad</button></li>
       </ul>
       <ul class="right-buttons">
-        <li><button class='login-btn'>Login</button></li>
+        <li>
+          <form id="login-form" action="/login" method="POST">
+            <input type="text" name="username" placeholder="email" />
+            <button class="login-btn">Login</button>
+          </form>
+        </li>
       </ul>
     </nav>
     <header id="showcase">
@@ -61,8 +69,8 @@
         these damn bikes y'all. Bikes on bikes on bikes.
       </p>
     </header>
-    <form action="/allbikes" method="GET">
-      <button class='all-bikes-btn' type="submit">Show All Bikes</button>
+    <form action="/allbikes" method="POST">
+      <button class="all-bikes-btn" type="submit">Show All Bikes</button>
     </form>
     <!-- Dropdown menus -->
     <section id="search-criteria">
@@ -79,15 +87,22 @@
           </button>
           <div class="dropdown-menu">
             <button class="dropdown-road" type="submit">Road Bikes</button>
-            <button class="dropdown-mountain" type="submit">Mountain Bikes</button>
+            <button class="dropdown-mountain" type="submit">
+              Mountain Bikes
+            </button>
             <button class="dropdown-other" type="submit">Other Bikes</button>
           </div>
         </div>
-        <form action='/pricerange' method="GET">
-        <label for='min-price'>Min Price</label>
-        <input type="number" name='min-price' id='min-price'>
-        <label for="max-price">Max Price</label>
-        <input type="number" name="max-price" id='max-price'>
+        <form action="/pricerange" method="GET">
+          <label for="min-price">Min Price</label>
+          <input type="number" name="min-price" id="min-price" />
+          <label for="max-price">Max Price</label>
+          <input type="number" name="max-price" id="max-price" /><button
+            class="submit-price-btn"
+            type="submit"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </section>
