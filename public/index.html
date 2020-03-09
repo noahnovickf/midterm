@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <!-- app JS -->
     <link rel="stylesheet" href=".//css/search-criteria.css" type="text/css" />
-   
+
     <title>Full Cycle</title>
   </head>
   <body>
@@ -49,11 +49,11 @@
       </h2>
       <ul class="middle-buttons">
         <li><button class="favourites-btn">Favourites</button></li>
-        <li><button class='messages-btn'>Messages</button></li>
-        <li><button class='post-ad-btn'> Post Ad </button></li>
+        <li><button class="messages-btn">Messages</button></li>
+        <li><button class="post-ad-btn">Post Ad</button></li>
       </ul>
       <ul class="right-buttons">
-        <li><button class='login-btn'>Login</button></li>
+        <li><button class="login-btn">Login</button></li>
       </ul>
     </nav>
     <header id="showcase">
@@ -64,7 +64,7 @@
       </p>
     </header>
     <form action="/allbikes" method="GET">
-      <button class='all-bikes-btn' type="submit">Show All Bikes</button>
+      <button class="all-bikes-btn" type="submit">Show All Bikes</button>
     </form>
     <!-- Dropdown menus -->
     <section id="search-criteria">
@@ -81,15 +81,17 @@
           </button>
           <div class="dropdown-menu">
             <button class="dropdown-road" type="submit">Road Bikes</button>
-            <button class="dropdown-mountain" type="submit">Mountain Bikes</button>
+            <button class="dropdown-mountain" type="submit">
+              Mountain Bikes
+            </button>
             <button class="dropdown-other" type="submit">Other Bikes</button>
           </div>
         </div>
-        <form action='/pricerange' method="GET">
-        <label for='min-price'>Min Price</label>
-        <input type="number" name='min-price' id='min-price'>
-        <label for="max-price">Max Price</label>
-        <input type="number" name="max-price" id='max-price'>
+        <form action="/pricerange" method="GET">
+          <label for="min-price">Min Price</label>
+          <input type="number" name="min-price" id="min-price" />
+          <label for="max-price">Max Price</label>
+          <input type="number" name="max-price" id="max-price" />
         </form>
       </div>
     </section>
