@@ -20,8 +20,11 @@
     ></script>
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/eventHandler.js"></script>
+    <script src="./js/event-handlers/featured.js"></script>
+    <script src="./js/event-handlers/allbikes.js"></script>
+    <script src="./js/event-handlers/filterprice.js"></script>
+    <script src="./js/event-handlers/filtertype.js"></script>
+    <script src="./js/event-handlers/login.js"></script>
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -92,6 +95,7 @@
           <input type="number" name="min-price" id="min-price" />
           <label for="max-price">Max Price</label>
           <input type="number" name="max-price" id="max-price" />
+          <button class="submit-price-btn" type="submit">Submit</button>
         </form>
       </div>
     </section>
