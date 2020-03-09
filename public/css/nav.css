@@ -1,7 +1,7 @@
 /* Section Nav Bar */
 
 nav {
-  background: #333;
+  background: black;
   color: #fff;
   position: sticky;
   top: 0;
@@ -25,7 +25,6 @@ nav .nav-logo span {
   color: #f4f4f4;
 }
 
-
 nav .nav-logo i {
   font-size: 2.5rem;
   padding-left: 0.5rem;
@@ -40,7 +39,7 @@ nav .right-buttons {
 }
 
 nav .middle-buttons li a,
-nav .right-buttons li a{
+nav .right-buttons li a {
   padding: 1.5rem 1rem;
   font-size: 1.7rem;
   border-radius: 5px;
