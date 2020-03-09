@@ -1,7 +1,7 @@
-#bikeDisplay {
+/* #bikeDisplay {
   column-count: 3;
   column-gap: 3rem;
-} 
+}  */
 
 .card {
   display: inline-block;
@@ -14,11 +14,11 @@
   padding: 1.5rem;
 }
 
-/* .head {
+.head {
   display: flex;
-  /* flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: center; */
+  align-content: center;
 }
 
 .img {
@@ -29,5 +29,5 @@
 .head .img {
   max-width: 31em;
   max-height: 31em;
-} */
+}
 
