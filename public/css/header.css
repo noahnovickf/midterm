@@ -1,12 +1,12 @@
 /* Showcase Img */
 header {
-  background: url('../images/hero-image.jpeg') no-repeat center center/cover;
+  background: url("../images/hero-image.jpeg") no-repeat center center/cover;
   height: 100vh;
 }
 
 #showcase h1 {
   color: #f4f4f4;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   text-align: center;
   padding-top: 10rem;
   font-size: 3.5rem;
@@ -18,5 +18,4 @@ header {
   text-align: center;
   font-size: 1.5rem;
   padding-top: 5rem;
-
 }
