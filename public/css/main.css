@@ -1,7 +1,11 @@
 /* #bikeDisplay {
   column-count: 3;
   column-gap: 3rem;
+<<<<<<< HEAD
 }  */
+=======
+}
+>>>>>>> d2180377e5dfb719e6ecc981e03d42023cf03507
 
 .card {
   display: inline-block;
@@ -18,8 +22,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+<<<<<<< HEAD
   align-content: center;
 }
+=======
+  align-content: center; */
+/*}
+>>>>>>> d2180377e5dfb719e6ecc981e03d42023cf03507
 
 .img {
   flex: 30%;
@@ -29,5 +38,9 @@
 .head .img {
   max-width: 31em;
   max-height: 31em;
+<<<<<<< HEAD
 }
 
+=======
+} */
+>>>>>>> d2180377e5dfb719e6ecc981e03d42023cf03507
