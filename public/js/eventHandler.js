@@ -17,20 +17,24 @@ $(() =>{
     console.log('hi')
   });
 
-  $('.dropdown-road').on('click', () => {
-    console.log('hi')
+  $('.dropdown-road').on('click', (e) => {
+    e.preventDefault();
+    console.log('hi');
   });
 
-  $('.dropdown-mountain').on('click', () => {
-    console.log('hi')
+  $('.dropdown-mountain').on('click', (e) => {
+    e.preventDefault();
+    console.log('hi');
   });
 
-  $('.dropdown-other').on('click', () => {
-    console.log('hi')
+  $('.dropdown-other').on('click', (e) => {
+    e.preventDefault();
+    console.log('hi');
   });
 
-  $('.dropdown-other').on('click', () => {
-    console.log('hi')
-  });
+  $('.all-bikes-btn').on('click', (e) => {
+    e.preventDefault();
+    console.log('bye');
+  })
 
 });
