@@ -57,9 +57,14 @@
       </ul>
       <ul class="right-buttons">
         <li>
-          <form id="login-form" action="/login" method="POST">
-            <input type="text" name="username" placeholder="email" />
-            <button class="login-btn">Login</button>
+          <form id="login-form" action="/api/login" method="POST">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="email"
+            />
+            <button type="submit" class="login-btn">Login</button>
           </form>
         </li>
       </ul>
@@ -105,8 +110,6 @@
           >
             Submit
           </button>
-
-          <input type="number" name="max-price" id="max-price" />
         </form>
       </div>
     </section>
