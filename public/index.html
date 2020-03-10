@@ -75,7 +75,7 @@
       </div>
 
       <div class="right-buttons">
-        <form id="login-form" action="/api/login" method="POST">
+        <form id="login-btn" action="/api/login" method="POST">
           <input
             type="text"
             id="username"
@@ -134,9 +134,19 @@
         </div>
         <form action="/pricerange" method="GET">
           <label for="min-price">Min Price</label>
-          <input type="number" name="min-price" id="min-price" />
+          <input
+            type="number"
+            name="min-price"
+            id="min-price"
+            placeholder="Enter price"
+          />
           <label for="max-price">Max Price</label>
-          <input type="number" name="max-price" id="max-price" />
+          <input
+            type="number"
+            name="max-price"
+            id="max-price"
+            placeholder="Enter price"
+          />
           <button class="submit-price-btn" type="submit">Submit</button>
         </form>
       </div>
