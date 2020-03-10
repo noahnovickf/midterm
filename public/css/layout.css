@@ -10,7 +10,7 @@
 button.all-bikes-btn {
   font-size: 1.25rem;
   border-radius: 10px;
-  border: none;
+  border: 2px solid black;
   background-color: #007bff;
   color: white;
   padding: 0.6rem 0.6rem;
