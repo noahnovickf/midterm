@@ -73,22 +73,23 @@
           </button>
         </span>
       </div>
-      <div class="right-buttons"></div>
 
-      <ul class="right-buttons">
-        <li>
-          <form id="login-form" action="/api/login" method="POST">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="email"
-            />
+      <div class="right-buttons">
+        <form id="login-form" action="/api/login" method="POST">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="email"
+          />
+          <span>
             <button type="submit" class="login-btn">Login</button>
-          </form>
+          </span>
+        </form>
+        <span>
           <button class="logout-btn">Logout</button>
-        </li>
-      </ul>
+        </span>
+      </div>
     </nav>
     <header id="showcase">
       <h1 class="text-lead">Some Motivational Bullshit to Sell Bikes</h1>

@@ -1,6 +1,7 @@
 /* The footer is fixed to the bottom of the page */
 footer {
   bottom: 0;
+  --main-bg-color: white;
 }
 
 @media (max-height: 800px) {
@@ -27,7 +28,7 @@ footer {
 .footer-distributed .footer-right {
   display: inline-block;
   vertical-align: top;
-  color: #ffffff;
+  color: var(--main-bg-color);
 }
 
 /* Footer left */
@@ -44,18 +45,18 @@ footer {
 .footer-distributed .footer-logo span {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f4f4f4;
+  color: var(--main-bg-color);
 }
 
 .footer-distributed .footer-logo i {
   font-size: 2.5rem;
   padding-left: 0.5rem;
-  color: white;
+  color: var(--main-bg-color);
 }
 
 /* Footer links */
 .footer-distributed .footer-links {
-  color: #ffffff;
+  color: var(--main-bg-color);
   margin: 20px 0 12px;
 }
 
@@ -81,7 +82,7 @@ footer {
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -99,7 +100,7 @@ footer {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #ffffff;
+  color: var(--main-bg-color);
   vertical-align: middle;
   margin: 0;
 }
@@ -131,7 +132,7 @@ footer {
 
 .footer-distributed .footer-company-about span {
   display: block;
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -149,7 +150,7 @@ footer {
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: var(--main-bg-color);
   text-align: center;
   line-height: 35px;
   margin-right: 3px;

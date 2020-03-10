@@ -2,6 +2,8 @@
 nav {
   background: black;
   --main-bg-color: white;
+  --first-color: #e8e8e8;
+  --second-color: #333;
   position: sticky;
   top: 0;
   height: 110px;
@@ -40,7 +42,7 @@ nav .right-buttons {
 
 nav .middle-buttons span:hover,
 nav .right-buttons span:hover {
-  background: #e8e8e8;
+  background: var(--first-color);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -50,7 +52,6 @@ nav .right-buttons span {
   padding: 0.5rem 0.5rem;
   font-size: 1.25rem;
   border-radius: 25px;
-  border: 2px solid #e8e8e8;
 }
 
 nav .middle-buttons span {
@@ -73,31 +74,31 @@ nav .right-buttons span button {
   border: none;
   outline: none;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--main-bg-color);
+  color: var(--main-bg-color);
 }
 
 nav .middle-buttons span button:hover {
-  color: #333;
+  color: var(--second-color);
 }
 
 nav .right-buttons span button:hover {
-  color: #333;
+  color: var(--second-color);
 }
 
-nav #login-form button {
+nav #login-btn button {
   border: none;
   outline: none;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--main-bg-color);
+  color: var(--main-bg-color);
 }
 
-nav #login-form button:hover {
-  background: #e8e8e8;
+nav #login-btn button:hover {
+  background: var(--first-color);
   cursor: pointer;
   border-radius: 5px;
-  color: #333;
+  color: var(--second-color);
 }
 
 nav .logout-btn {
@@ -105,15 +106,15 @@ nav .logout-btn {
   border: none;
   outline: none;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--main-bg-color);
+  color: var(--main-bg-color);
 }
 
 nav .logout-btn:hover {
-  background: #e8e8e8;
+  background: var(--first-color);
   cursor: pointer;
   border-radius: 5px;
-  color: #333;
+  color: var(--second-color);
 }
 
 nav .post-item-btn {
