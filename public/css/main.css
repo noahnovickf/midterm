@@ -26,3 +26,12 @@
   max-width: 31em;
   max-height: 31em;
 }
+
+.grey {
+  filter: grayscale(1);
+}
+
+.sold {
+  color: red;
+  font-weight: 700;
+}
