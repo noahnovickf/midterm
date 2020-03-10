@@ -51,6 +51,7 @@
         <span>Full</span> Cycle
         <i class="fas fa-bicycle"></i>
       </h2>
+
       <div class="middle-buttons">
         <span>
           <button class="favourites-btn">
@@ -70,6 +71,25 @@
           </button>
         </span>
       </div>
+
+      <ul class="middle-buttons">
+        <li><button class="favourites-btn">Favourites</button></li>
+        <li><button class="messages-btn">Messages</button></li>
+        <li><button class="post-ad-btn">Post Ad</button></li>
+      </ul>
+      <ul class="right-buttons">
+        <li>
+          <form id="login-form" action="/api/login" method="POST">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="email"
+            />
+            <button type="submit" class="login-btn">Login</button>
+          </form>
+        </li>
+      </ul>
     </nav>
     <header id="showcase">
       <h1 class="text-lead">Some Motivational Bullshit to Sell Bikes</h1>

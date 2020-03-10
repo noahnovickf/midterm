@@ -1,20 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const getUserId = require("../login");
+const { getUserId, login } = require("../login");
 
 module.exports = db => {
-  router.get("/", (req, res) => {
-    db.getAllBikes()
-      .then(bikes => {
-        res.json({ bikes });
-        //console.log(bikes);
-      })
-      .catch(error => res.status(500).json({ error }));
-  });
-
   router.post("/login", (req, res) => {
-    res.cookie("username", "Username");
-    res.send("ok");
+    res.cookie("username", req.body.username);
+    res.sendStatus(200);
   });
 
   router.get("/favourites", (req, res) => {
@@ -42,6 +33,15 @@ module.exports = db => {
       .catch(error => res.status(500).json({ error }));
   });
 
+  router.get("/", (req, res) => {
+    db.getAllBikes()
+      .then(bikes => {
+        res.json({ bikes });
+        //console.log(bikes);
+      })
+      .catch(error => res.status(500).json({ error }));
+  });
+
   // router.get("/pricerange", (req, res) => {});
 
   // router.get("/bikediscipline", (req, res) => {});
@@ -49,4 +49,4 @@ module.exports = db => {
   return router;
 };
 
-router.get("/logout", (req, res) => {});
+//outer.get("/logout", (req, res) => {});
