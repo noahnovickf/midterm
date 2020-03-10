@@ -60,8 +60,15 @@ module.exports = db => {
 
   router.post("/deleteBikes/", (req, res) => {
     const bikeId = req.body.bike_id;
-    console.log("HELLOOOOO:", req.body);
     db.deleteListing(bikeId).then(() => {
+      res.end();
+    });
+  });
+
+  router.post("/sold/", (req, res) => {
+    const bikeId = req.body.bike_id;
+    db.markSold(bikeId).then(() => {
+      console.log("hi");
       res.end();
     });
   });

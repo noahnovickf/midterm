@@ -108,6 +108,17 @@ const deleteListing = bike => {
   );
 };
 
+const markSold = bike => {
+  return pool.query(
+    `
+  UPDATE bikes
+  SET sold= true
+  where id = $1
+  `,
+    [bike]
+  );
+};
+
 const filterType = category => {
   //same as price
   return (
@@ -136,5 +147,6 @@ module.exports = {
   filterDiscipline,
   filterType,
   getAllUsers,
-  findFavourites
+  findFavourites,
+  markSold
 };
