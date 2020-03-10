@@ -10,7 +10,15 @@ $(() => {
       })
       .then(() => {
         $(".add-fav-btn").on("click", e => {
-          console.log("works");
+          console.log(e);
+          $.ajax({
+            url: "/api/addfavourites",
+            method: "POST",
+            dataType: "json",
+            data: {
+              bike_id: e.currentTarget.id
+            }
+          });
         });
       })
       .then(() => {
@@ -56,7 +64,7 @@ $(() => {
     ${bike.description}
     </p>
     <div class="user-btns">
-    <button class="btn btn-primary add-fav-btn">Favourite</button>
+    <button id="${bike.id}" class="btn btn-primary add-fav-btn">Favourite</button>
     <button  class="btn btn-primary">Contact Seller</button>
     </div>
     <div class="admin-btns">
