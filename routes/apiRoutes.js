@@ -55,6 +55,7 @@ module.exports = db => {
       })
       .then(() => {
         db.favouriteBike(userID, bikeId);
+        res.send('success');
       });
   });
 
