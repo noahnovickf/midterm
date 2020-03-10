@@ -40,15 +40,30 @@ module.exports = db => {
       .catch(error => res.status(500).json({ error }));
   });
 
+  router.post("/addfavourites/", (req, res) => {
+    const bikeId = req.body.bike_id;
+    console.log(req.body.bike_id);
+    const email = req.cookies.username;
+    let userID;
+    db.getAllUsers()
+      .then(users => {
+        for (let i of users) {
+          if (email === i.email) {
+            userID = i.id;
+          }
+        }
+      })
+      .then(() => {
+        db.favouriteBike(userID, bikeId);
+      });
+  });
+
   router.get("/", (req, res) => {
     db.getAllBikes()
       .then(bikes => {
         res.json({ bikes });
-        //console.log(bikes);
       })
       .catch(error => res.status(500).json({ error }));
   });
   return router;
 };
-
-//outer.get("/logout", (req, res) => {});

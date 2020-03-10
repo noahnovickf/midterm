@@ -61,13 +61,14 @@ const filterBikesPrice = options => {
   return pool.query(queryString, queryParams).then(res => res.rows);
 };
 
-const favouriteBike = ids => {
+const favouriteBike = (user, bike) => {
+  const arr = [user, bike];
   return pool.query(
     `INSERT INTO favourites (user_id, bike_id)
     VALUES ($1,$2)
     RETURNING *;
     `,
-    [ids.user_id, ids.bike_id]
+    arr
   );
 };
 

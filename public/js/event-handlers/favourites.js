@@ -9,7 +9,15 @@ $(() => {
       })
       .then(() => {
         $(".add-fav-btn").on("click", e => {
-          console.log("works");
+          console.log(e);
+          $.ajax({
+            url: "/api/addfavourites",
+            method: "POST",
+            dataType: "json",
+            data: {
+              bike_id: e.currentTarget.id
+            }
+          });
         });
       })
       .then(() => {
@@ -23,9 +31,11 @@ $(() => {
       .then(() => {
         if (document.cookie.slice(9) === "noah%40landlab.ca") {
           $(".admin-btns").css({ display: "inline" });
-          $(".add-fav-btn").css({ display: "none" });
           $(".post-item-btn").css({ display: "inline" });
         }
+      })
+      .then(() => {
+        $(".add-fav-btn").css({ display: "none" });
       });
 
     const renderBikes = res => {
