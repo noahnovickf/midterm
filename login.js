@@ -8,13 +8,7 @@ const login = email => {
   }
 };
 
-const getUserID = email => {
-  for (let key in db.users) {
-    if (email === users[key].email) {
-      return users[key].id;
-    }
-  }
-};
+const getUserID = email => {};
 
 module.exports = {
   getUserID,

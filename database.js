@@ -71,14 +71,27 @@ const favouriteBike = ids => {
   );
 };
 
+const getAllUsers = () => {
+  return pool.query(`SELECT * from users;`).then(res => {
+    //console.log(res.rows);
+    return res.rows;
+  });
+};
+
+const findFavourites = id => {
+  return pool
+    .query(`SELECT * from favourites where user_id = $1`, [id])
+    .then(res => res.rows);
+};
+
 const getFavouriteBikes = user => {
   //tiny app CURRENT USER FUNCTION
   return pool
     .query(
-      `SELECT * from favourites
+      `SELECT bike_id from favourites
     WHERE user_id = $1
     `,
-      [user_id]
+      [user]
     )
     .then(res => res.rows);
 };
@@ -120,5 +133,7 @@ module.exports = {
   addListing,
   getAllBikes,
   filterDiscipline,
-  filterType
+  filterType,
+  getAllUsers,
+  findFavourites
 };
