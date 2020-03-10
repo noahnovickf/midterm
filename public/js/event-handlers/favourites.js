@@ -1,7 +1,6 @@
 $(() => {
   $(".favourites-btn").on("click", e => {
     e.preventDefault();
-    console.log("bye");
 
     // const featuredBikes = $;
     $.ajax({ url: "/api/favourites", method: "GET" })
@@ -19,15 +18,19 @@ $(() => {
         });
       })
       .then(() => {
-        $(".sold-btn").on("click", e => {
-          console.log("works");
-        });
+        $(".sold-btn").on("click", e => {});
+      })
+      .then(() => {
+        if (document.cookie.slice(9) === "noah%40landlab.ca") {
+          $(".admin-btns").css({ display: "inline" });
+          $(".add-fav-btn").css({ display: "none" });
+          $(".post-item-btn").css({ display: "inline" });
+        }
       });
 
     const renderBikes = res => {
       $("#bikeDisplay").empty();
-      for (let bike of res.bikes) {
-        //if(bike.id === )
+      for (let bike of res.favBikes) {
         $("#bikeDisplay").prepend(createBikeCard(bike));
       }
     };
