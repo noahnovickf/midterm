@@ -16,8 +16,17 @@ $(() => {
           $("#username").val("");
           $("#login-form").css({ display: "inline" });
           $(".logout-btn").css({ display: "none" });
-          $removeCookie("username", { path: "/" });
+          $.removeCookie("username", { path: "/" });
         });
       });
+    if (
+      $("#login-form")
+        .serialize()
+        .slice(9) === "noah%40landlab.ca"
+    ) {
+      $(".admin-btns").css({ display: "inline" });
+      $(".add-fav-btn").css({ display: "none" });
+      $(".post-item-btn").css({ display: "inline" });
+    }
   });
 });
