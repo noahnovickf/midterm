@@ -1,0 +1,19 @@
+#layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  margin-left: 1rem;
+  margin-top: 3em;
+}
+
+button.all-bikes-btn {
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 0.6rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
