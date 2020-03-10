@@ -99,12 +99,12 @@ const getFavouriteBikes = user => {
 
 const deleteListing = bike => {
   //tiny app
-  return (
-    pool.query(`
+  return pool.query(
+    `
   DELETE from bikes 
-  where bike_id =  $1
-  `),
-    [bike.bike]
+  where id = $1
+  `,
+    [bike]
   );
 };
 
