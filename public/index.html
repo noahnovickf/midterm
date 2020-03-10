@@ -23,6 +23,7 @@
     <script src="./js/event-handlers/featured.js"></script>
     <script src="./js/event-handlers/allbikes.js"></script>
     <script src="./js/event-handlers/filterprice.js"></script>
+    <script src="./js/event-handlers/favourites.js"></script>
     <script src="./js/event-handlers/filtertype.js"></script>
     <script src="./js/event-handlers/login.js"></script>
     <!-- Bootstrap-->
@@ -73,7 +74,11 @@
       </div>
 
       <ul class="middle-buttons">
-        <li><button class="favourites-btn">Favourites</button></li>
+        <li></li>
+          <form action="/favourites" method="GET">
+            <button class="favourites-btn">Favourites</button>
+          </form>
+        </li>
         <li><button class="messages-btn">Messages</button></li>
         <li><button class="post-ad-btn">Post Ad</button></li>
       </ul>

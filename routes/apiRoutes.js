@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getUserId, login } = require("../login");
+const { getUserID, login } = require("../login");
 
 module.exports = db => {
   router.post("/login", (req, res) => {
@@ -9,24 +9,31 @@ module.exports = db => {
   });
 
   router.get("/favourites", (req, res) => {
-    const userid = getUserId();
-    db.getFavouriteBikes(userid) //I NEED TO PASS IN USER ID TO THIS FUNCTION AFTER I WRITE A FUNCTION TO GET THE CURRENT USER ID
-      .then(favourites => {
-        res.json({ favourites });
-      })
-      .catch(error => res.status(500).json({ error }));
+    let userEmail = decodeURIComponent(req.headers.cookie.slice(9));
+    console.log(userEmail);
+    let userID;
+    db.getAllUsers().then(users => {
+      for (let i of users) {
+        if (userEmail === i.email) {
+          userID = i.id;
+        }
+      }
+      console.log(userID);
+      console.log(
+        db.getFavouriteBikes(userID).then(favourites => {
+          res.json({ favourites });
+        })
+      );
+      /*
+      1. find the user that matches the email
+      2. find all the favourites of the user
+      3. return json of favorites
+      */
+    });
   });
 
   router.post("/newListing", (req, res) => {
     db.addListing() //
-      .then(bikes => {
-        res.json({ bikes });
-      })
-      .catch(error => res.status(500).json({ error }));
-  });
-
-  router.get("/bikecategory", (req, res) => {
-    db.filterType()
       .then(bikes => {
         res.json({ bikes });
       })
