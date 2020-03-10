@@ -1,6 +1,7 @@
 /* The footer is fixed to the bottom of the page */
 footer {
   bottom: 0;
+  --main-bg-color: white;
 }
 
 @media (max-height: 800px) {
@@ -12,27 +13,33 @@ footer {
     padding-top: 40px;
   }
 }
+
 .footer-distributed {
   background-color: black;
   box-sizing: border-box;
-  width: 100%;
-  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
   font: bold 16px sans-serif;
-  padding: 50px 50px 60px 50px;
+  justify-content: space-around;
   margin-top: 80px;
+  padding: 50px 50px 60px 50px;
+  text-align: left;
+  width: 100%;
 }
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
 .footer-distributed .footer-right {
+  color: var(--main-bg-color);
   display: inline-block;
+  margin: 1rem 0;
+  text-align: center;
   vertical-align: top;
-  color: #ffffff;
 }
 
 /* Footer left */
 .footer-distributed .footer-left {
-  width: 30%;
+  /* width: 30%; */
 }
 
 /* Footer header */
@@ -44,18 +51,18 @@ footer {
 .footer-distributed .footer-logo span {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f4f4f4;
+  color: var(--main-bg-color);
 }
 
 .footer-distributed .footer-logo i {
   font-size: 2.5rem;
   padding-left: 0.5rem;
-  color: white;
+  color: var(--main-bg-color);
 }
 
 /* Footer links */
 .footer-distributed .footer-links {
-  color: #ffffff;
+  color: var(--main-bg-color);
   margin: 20px 0 12px;
 }
 
@@ -76,12 +83,18 @@ footer {
 
 /* Footer Center */
 .footer-distributed .footer-center {
-  width: 35%;
+  /* width: 35%; */
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -99,7 +112,7 @@ footer {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #ffffff;
+  color: var(--main-bg-color);
   vertical-align: middle;
   margin: 0;
 }
@@ -118,7 +131,7 @@ footer {
 
 /* Footer Right */
 .footer-distributed .footer-right {
-  width: 30%;
+  /* width: 30%; */
 }
 
 .footer-distributed .footer-company-about {
@@ -131,7 +144,7 @@ footer {
 
 .footer-distributed .footer-company-about span {
   display: block;
-  color: #ffffff;
+  color: var(--main-bg-color);
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -149,7 +162,7 @@ footer {
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: var(--main-bg-color);
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
