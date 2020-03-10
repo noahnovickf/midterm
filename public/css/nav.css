@@ -1,8 +1,7 @@
 /* Section Nav Bar */
-
 nav {
   background: black;
-  color: #fff;
+  --main-bg-color: white;
   position: sticky;
   top: 0;
   height: 110px;
@@ -15,6 +14,7 @@ nav {
 }
 
 nav .nav-logo {
+  color: var(--main-bg-color);
   font-size: 2.5rem;
   padding-left: 0.75rem;
 }
@@ -22,7 +22,7 @@ nav .nav-logo {
 nav .nav-logo span {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f4f4f4;
+  color: var(--main-bg-color);
 }
 
 nav .nav-logo i {
@@ -50,7 +50,7 @@ nav .right-buttons span {
   padding: 0.5rem 0.5rem;
   font-size: 1.25rem;
   border-radius: 25px;
-  border: 2px solid white;
+  border: 2px solid #e8e8e8;
 }
 
 nav .middle-buttons span {
@@ -65,8 +65,8 @@ nav .middle-buttons span button {
   border: none;
   outline: none;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: var(--main-bg-color);
+  color: var(--main-bg-color);
 }
 
 nav .right-buttons span button {
