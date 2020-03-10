@@ -17,3 +17,7 @@ button.all-bikes-btn {
   margin-left: 5rem;
   margin-top: 1rem;
 }
+
+.admin-btns {
+  display: none;
+}

@@ -19,17 +19,16 @@ module.exports = db => {
         }
       }
       console.log(userID);
-      console.log(
-        db.getFavouriteBikes(userID).then(favourites => {
-          res.json({ favourites });
-        })
-      );
-      /*
-      1. find the user that matches the email
-      2. find all the favourites of the user
-      3. return json of favorites
-      */
-      res.json({ users });
+      db.getFavouriteBikes(userID).then(favourites => {
+        const fav = [];
+        for (let i of favourites) {
+          fav.push(i.bike_id);
+        }
+        db.getAllBikes().then(bikes => {
+          const favBikes = bikes.filter(bike => fav.includes(bike.id));
+          res.json({ favBikes });
+        });
+      });
     });
   });
 
@@ -41,20 +40,30 @@ module.exports = db => {
       .catch(error => res.status(500).json({ error }));
   });
 
+  router.post("/addfavourites/", (req, res) => {
+    const bikeId = req.body.bike_id;
+    console.log(req.body.bike_id);
+    const email = req.cookies.username;
+    let userID;
+    db.getAllUsers()
+      .then(users => {
+        for (let i of users) {
+          if (email === i.email) {
+            userID = i.id;
+          }
+        }
+      })
+      .then(() => {
+        db.favouriteBike(userID, bikeId);
+      });
+  });
+
   router.get("/", (req, res) => {
     db.getAllBikes()
       .then(bikes => {
         res.json({ bikes });
-        //console.log(bikes);
       })
       .catch(error => res.status(500).json({ error }));
   });
-
-  // router.get("/pricerange", (req, res) => {});
-
-  // router.get("/bikediscipline", (req, res) => {});
-
   return router;
 };
-
-//outer.get("/logout", (req, res) => {});

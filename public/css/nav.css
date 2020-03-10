@@ -115,3 +115,7 @@ nav .logout-btn:hover {
   border-radius: 5px;
   color: #333;
 }
+
+nav .post-item-btn {
+  display: none;
+}
