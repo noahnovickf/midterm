@@ -6,8 +6,18 @@ $(() => {
       url: "/api/login",
       method: "POST",
       data: $("#login-form").serialize()
-    }).then(res => {
-      $("#login-form").css({ display: "none" });
-    });
+    })
+      .then(res => {
+        $("#login-form").css({ display: "none" });
+        $(".logout-btn").css({ display: "inline" });
+      })
+      .then(() => {
+        $(".logout-btn").on("click", e => {
+          $("#username").val("");
+          $("#login-form").css({ display: "inline" });
+          $(".logout-btn").css({ display: "none" });
+          $removeCookie("username", { path: "/" });
+        });
+      });
   });
 });

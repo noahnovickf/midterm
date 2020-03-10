@@ -11,7 +11,7 @@ $(() => {
     const renderBikes = res => {
       $("#bikeDisplay").empty();
       for (let bike of res.bikes) {
-        if(bike.id === )
+        //if(bike.id === )
         $("#bikeDisplay").prepend(createBikeCard(bike));
       }
     };
