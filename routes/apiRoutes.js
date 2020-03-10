@@ -42,7 +42,6 @@ module.exports = db => {
 
   router.post("/addfavourites/", (req, res) => {
     const bikeId = req.body.bike_id;
-    console.log(req.body.bike_id);
     const email = req.cookies.username;
     let userID;
     db.getAllUsers()
@@ -55,8 +54,16 @@ module.exports = db => {
       })
       .then(() => {
         db.favouriteBike(userID, bikeId);
-        res.send('success');
+        res.end();
       });
+  });
+
+  router.post("/deleteBikes/", (req, res) => {
+    const bikeId = req.body.bike_id;
+    console.log("HELLOOOOO:", req.body);
+    db.deleteListing(bikeId).then(() => {
+      res.end();
+    });
   });
 
   router.get("/", (req, res) => {
