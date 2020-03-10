@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="./css/header.css" type="text/css" />
     <link rel="stylesheet" href="./css/footer.css" type="text/css" />
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/layout.css" type="text/css" />
     <!-- app JS -->
     <link rel="stylesheet" href=".//css/search-criteria.css" type="text/css" />
 
@@ -50,6 +51,27 @@
         <span>Full</span> Cycle
         <i class="fas fa-bicycle"></i>
       </h2>
+
+      <div class="middle-buttons">
+        <span>
+          <button class="favourites-btn">
+            Favourites
+          </button>
+        </span>
+        <span>
+          <button class="messages-btn">
+            Messages
+          </button>
+        </span>
+      </div>
+      <div class="right-buttons">
+        <span>
+          <button class="login-btn">
+            Login
+          </button>
+        </span>
+      </div>
+
       <ul class="middle-buttons">
         <li><button class="favourites-btn">Favourites</button></li>
         <li><button class="messages-btn">Messages</button></li>
@@ -76,9 +98,15 @@
         these damn bikes y'all. Bikes on bikes on bikes.
       </p>
     </header>
-    <form action="/allbikes" method="GET">
-      <button class="all-bikes-btn" type="submit">Show All Bikes</button>
-    </form>
+
+    <section id="layout">
+      <form action="/allbikes" method="GET">
+        <button class="all-bikes-btn" type="submit">
+          Show All Bikes
+        </button>
+      </form>
+    </section>
+
     <!-- Dropdown menus -->
     <section id="search-criteria">
       <div class="dropdowns">
@@ -93,11 +121,15 @@
             Bike Type
           </button>
           <div class="dropdown-menu">
-            <button class="dropdown-road" type="submit">Road Bikes</button>
-            <button class="dropdown-mountain" type="submit">
+            <button class="dropdown-road bike-selection" type="submit">
+              Road Bikes
+            </button>
+            <button class="dropdown-mountain bike-selection" type="submit">
               Mountain Bikes
             </button>
-            <button class="dropdown-other" type="submit">Other Bikes</button>
+            <button class="dropdown-other bike-selection" type="submit">
+              Other Bikes
+            </button>
           </div>
         </div>
         <form action="/pricerange" method="GET">
@@ -110,7 +142,9 @@
       </div>
     </section>
     <!-- Page-specific (main) content here -->
+
     <main id="bikeDisplay" class="container-fluid text-center"></main>
+
     <div class="head"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script

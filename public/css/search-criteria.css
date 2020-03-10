@@ -1,11 +1,33 @@
 #search-criteria {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 5rem;
   padding: 1.5rem 0;
   margin-bottom: 2rem;
 }
 
-#search-criteria .dropdowns .btn-group{
-  margin: 0 1.5rem;
+#search-criteria .dropdowns .btn-group {
+  margin: 2rem 2rem 2rem 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* position: relative;
+  display: inline-block; */
+}
+
+#search-criteria .dropdowns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bike-selection {
+  background-color: transparent;
+  border: 0px;
 }
