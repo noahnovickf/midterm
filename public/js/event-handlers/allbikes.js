@@ -9,20 +9,26 @@ $(() => {
       })
       .then(() => {
         $(".add-fav-btn").on("click", e => {
-          console.log(e);
           $.ajax({
             url: "/api/addfavourites",
             method: "POST",
             dataType: "json",
             data: {
-              bike_id: e.currentTarget.id
+              bike_id: $(e.currentTarget).data("id")
             }
           });
         });
       })
       .then(() => {
         $(".delete-btn").on("click", e => {
-          console.log("works");
+          $.ajax({
+            url: "/api/deleteBikes",
+            method: "POST",
+            dataType: "json",
+            data: {
+              bike_id: $(e.currentTarget).data("id")
+            }
+          });
         });
       })
       .then(() => {
@@ -54,11 +60,11 @@ $(() => {
     ${bike.description}
     </p>
     <div class="user-btns">
-    <button id="${bike.id}" class="btn btn-primary add-fav-btn">Favourite</button>
+    <button data-id="${bike.id}" class="btn btn-primary add-fav-btn">Favourite</button>
     <button  class="btn btn-primary">Contact Seller</button>
     </div>
     <div class="admin-btns">
-    <button  class="btn btn-danger delete-btn">Delete</button>
+    <button data-id="${bike.id}" class="btn btn-danger delete-btn">Delete</button>
     <button class="btn btn-danger sold-btn">Mark Sold</button>
     </div>
     </div>`;
