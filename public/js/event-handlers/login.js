@@ -16,14 +16,11 @@ $(() => {
           $("#username").val("");
           $("#login-form").css({ display: "inline" });
           $(".logout-btn").css({ display: "none" });
-          $.removeCookie("username", { path: "/" });
+          document.cookie =
+            "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         });
       });
-    if (
-      $("#login-form")
-        .serialize()
-        .slice(9) === "noah%40landlab.ca"
-    ) {
+    if (document.cookie.slice(9) === "noah%40landlab.ca") {
       $(".admin-btns").css({ display: "inline" });
       $(".add-fav-btn").css({ display: "none" });
       $(".post-item-btn").css({ display: "inline" });

@@ -13,14 +13,19 @@ $(() => {
         });
       })
       .then(() => {
-        $(".delete-btn").on("click", e => {
-          console.log("works");
-        });
+        $(".delete-btn").on("click", e => {});
       })
       .then(() => {
         $(".sold-btn").on("click", e => {
           console.log("works");
         });
+      })
+      .then(() => {
+        if (document.cookie.slice(9) === "noah%40landlab.ca") {
+          $(".admin-btns").css({ display: "inline" });
+          $(".add-fav-btn").css({ display: "none" });
+          $(".post-item-btn").css({ display: "inline" });
+        }
       });
 
     const renderBikes = res => {
@@ -52,11 +57,6 @@ $(() => {
       return card;
     };
     $(".all-bikes-btn").css({ display: "inline-block" });
-    console.log($.document.cookie("username"));
-    // if ($.cookie.slice(9) === "noah%40landlab.ca") {
-    //   $(".admin-btns").css({ display: "inline" });
-    //   $(".add-fav-btn").css({ display: "none" });
-    // }
   });
   $(".dropdown-mountain").on("click", e => {
     e.preventDefault();
@@ -81,6 +81,13 @@ $(() => {
         $(".sold-btn").on("click", e => {
           console.log("works");
         });
+      })
+      .then(() => {
+        if (document.cookie.slice(9) === "noah%40landlab.ca") {
+          $(".admin-btns").css({ display: "inline" });
+          $(".add-fav-btn").css({ display: "none" });
+          $(".post-item-btn").css({ display: "inline" });
+        }
       });
 
     const renderBikes = res => {
@@ -136,6 +143,13 @@ $(() => {
         $(".sold-btn").on("click", e => {
           console.log("works");
         });
+      })
+      .then(() => {
+        if (document.cookie.slice(9) === "noah%40landlab.ca") {
+          $(".admin-btns").css({ display: "inline" });
+          $(".add-fav-btn").css({ display: "none" });
+          $(".post-item-btn").css({ display: "inline" });
+        }
       });
 
     const renderBikes = res => {
