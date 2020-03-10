@@ -1,11 +1,11 @@
 INSERT INTO bikes (user_id, title, description, image_url, price, category, discipline, featured)
 Values
-(7,'Cervelo S3', 'Ultra fast, mid-range Aero Bike','https://www.cervelo.com/media/catalog/product/cache/5139b9d6dc2b5890945cba145dda7575/s/s/sseries_black_red_1_.jpg',5399,'road','aero',true),
-(7,'Giant TCR Advanced 0 disc','dream climber bike, great value','https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.giant-bicycles.com%2Fca%2Ftcr-advanced-pro-0-disc&psig=AOvVaw2ecelu1wqSPWUr8Vcs8hc4&ust=1583602327637000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjbrMGwhugCFQAAAAAdAAAAABAD',10999,'road','climbing',false),
-(7,'Cervelo S5', 'World Tour quality, uncompromising speed','https://www.cervelo.com/media/catalog/product/cache/5139b9d6dc2b5890945cba145dda7575/d/a/da_di2_black_teal_1__3.jpg', 12999,'road', 'aero', false),
+(1,'Cervelo S3', 'Ultra fast, mid-range Aero Bike','https://www.cervelo.com/media/catalog/product/cache/5139b9d6dc2b5890945cba145dda7575/s/s/sseries_black_red_1_.jpg',5399,'road','aero',true),
+(1,'Giant TCR Advanced 0 disc','dream climber bike, great value','https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.giant-bicycles.com%2Fca%2Ftcr-advanced-pro-0-disc&psig=AOvVaw2ecelu1wqSPWUr8Vcs8hc4&ust=1583602327637000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjbrMGwhugCFQAAAAAdAAAAABAD',10999,'road','climbing',false),
+(1,'Cervelo S5', 'World Tour quality, uncompromising speed','https://www.cervelo.com/media/catalog/product/cache/5139b9d6dc2b5890945cba145dda7575/d/a/da_di2_black_teal_1__3.jpg', 12999,'road', 'aero', false),
 (2,'Specialized S-Works Venge','Everyones Dream Bike','https://www.sefiles.net/images/library/zoom/specialized-s-works-venge-disc-etap-355226-1.jpg',17999,'road','aero', true),
 (2,'Cannondale SystemSix','Fast bike, sleek look.','https://www.google.com/url?sa=i&url=https%3A%2F%2Fracefietsblog.nl%2Fteam-ef-is-klaar-voor-2019-met-cannondale-en-rapha%2F&psig=AOvVaw2j3ZF8xXeQ1X7BofCMwJll&ust=1583602725676000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCUzIWyhugCFQAAAAAdAAAAABAd', 13999, 'road', 'aero', false),
-(7,'Kona Hei Hei','Race this bike to podiums','https://images.konaworld.com/2018/med/hei_hei_al_dl.jpg', 3999, 'mountain', 'xc', true),
+(1,'Kona Hei Hei','Race this bike to podiums','https://images.konaworld.com/2018/med/hei_hei_al_dl.jpg', 3999, 'mountain', 'xc', true),
 (3,'Giant Trance','Perfect XC into bike','https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/ytcx77ogkgvxnpo56gth/MY20TranceADPRO290_ColorA.jpg', 9999, 'mountain', 'xc', false),
 (3,'Canyon Grail','Fun anywhere, looks sily','https://www.canyon.com/dw/image/v2/BCML_PRD/on/demandware.static/-/Sites-canyon-master/default/dw10f3c4ab/images/full/full_2020_/2020/full_2020_grail-cf-slx-8-0-etab_2381_bu-bk_P5.png?sw=698&sh=393&sm=fit&sfrm=png', 5999, 'other', 'gravel', true),
 (2,'Specialized Tarmac','Ride the roads without feeling them','https://www.specialized.com/us/en/tarmac-disc-comp--ultegra-di2/p/171358?color=271684-171358&searchText=90620-5349', 14999, 'road', 'all-round', false),
@@ -30,12 +30,12 @@ Can take you everywhere','https://static.evanscycles.com/production/bikes/road-b
 (3,'Cervelo P5','Looks silly, but effective','https://static.evanscycles.com/production/bikes/triathlontt-bikes/product-image/Original/cervelo-p5-etap-2017-triathlon-bike-black-yellow-EV309510-8510-2.jpg',14999,'other', 'TT', false),
 (4,'Canyon Aeroad CF SLX','Aero is everything','https://content.retto.com/products/canyon-aeroad-cf-slx-9-0-di2___20190923-031_G1.jpg',3999,'road', 'aero', false),
 (5,'Trek Supercaliber','Ride over everything and past everyone','https://trek.scene7.com/is/image/TrekBicycleProducts/Supercaliber98_20_28580_B_Primary?$responsive-pjpg$&wid=1024&hei=768',7999,'mountain', 'xc', false),
-(7,'Kona Process 134','For the people who like throwing themselves down a mountain','https://images.konaworld.com/2017/full/process_134.jpg',2999,'mountain', 'enduro', false),
+(1,'Kona Process 134','For the people who like throwing themselves down a mountain','https://images.konaworld.com/2017/full/process_134.jpg',2999,'mountain', 'enduro', false),
 (2,'Felt AR advanced','What a lame name for a nice bike','https://cdn.shopify.com/s/files/1/0021/5701/9254/products/BBIAA03_AR-ADV-ULT-DI2-AQUA-rgb72dpi_2048x.jpg?v=1573082508',10999,'road', 'aero', false),
 (3,'BMC teamelite 01 ONE','Slim and lightweight','https://www.sefiles.net/images/library/large/bmc-teamelite-01-one-344784-1.jpeg',6999,'mountain', 'xc', false),
 (3,'Specialized S-Works Shiv Disc','TT bikes still look weird','https://s7d5.scene7.com/is/image/Specialized/97420-00_SHIV-SW-DISC-DI2-GLDNYEL-VIVPNK-BLK_HERO',19999,'other', 'TT', false),
 (2,'Norco Section XR  C','A canadian adventure bike','https://ride.net.au/wp-content/uploads/2019/11/n50.jpg',750,'other', 'gravel', false),
-(7,'OPEN WI.DE','Money and roads burn','https://contenderbicycles.com/wp-content/uploads/2019/05/OPEN-WIDE-SRAM-Force-AXS-Contender-Bicycles.jpg',12999,'other', 'gravel', false),
+(1,'OPEN WI.DE','Money and roads burn','https://contenderbicycles.com/wp-content/uploads/2019/05/OPEN-WIDE-SRAM-Force-AXS-Contender-Bicycles.jpg',12999,'other', 'gravel', false),
 (4,'Scott Addict','Amazingly fast','https://contenderbicycles.com/wp-content/uploads/2019/06/2020-Scott-Addict-RC-10-Grey.jpg',9999,'road', 'all-round', false),
 (4,'Trek Topfuel','Beautiful FS bike','https://www.sefiles.net/images/library/large/trek-top-fuel-9.8-sl-273281-1.jpg',5999,'mountain', 'enduro', false),
 (5,'Cannondale Topstone','A city bike on steroids','https://contenderbicycles.com/wp-content/uploads/2019/06/Cannondale-Topstone-Carbon-105.jpg',7999,'other', 'gravel', false),
@@ -47,8 +47,12 @@ Can take you everywhere','https://static.evanscycles.com/production/bikes/road-b
 (4,'Kona Libre DL','Shiny but effective','https://images.konaworld.com/2020/med/libre_dl.jpg',4449,'other', 'grael', false),
 (3,'Canyon Speedmax','Edgy','https://content.roadbikereview.com/channels/roadbikereview/images/products/large/product_509650_84556.jpg',12000,'other', 'TT', false),
 (3,'Scott Scale','Bumps and jumps ','https://dfp2hfrf3mn0u.cloudfront.net/274/274594_1586229_png_zoom_3.jpg',3499,'moutain', 'xc', false),
-(7,'Specialized Stuntjumped','Money for style and speed','https://www.sefiles.net/images/library/zoom/specialized-stumpjumper-fsr-men-comp-29-12-spd-344609-1.png',6999,'mountain', 'enduro', false),
+(1,'Specialized Stuntjumped','Money for style and speed','https://www.sefiles.net/images/library/zoom/specialized-stumpjumper-fsr-men-comp-29-12-spd-344609-1.png',6999,'mountain', 'enduro', false),
 (2,'3T Strada','shockingly ineffective','https://www.sefiles.net/images/library/large/3t-strada-pro-250110-1-12-2.jpg',1999,'road', 'aero', false),
 (3,'Merida Reacto Disc','Top 10 most expensive bikes','https://www.99bikes.com.au/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/r/e/reacto_disc_5000_blkblk_my2020.jpg',18999,'road', 'aero', false),
 (4,'Norco Search XR Carbon','Go anywhere in style','https://static.evanscycles.com/production/bikes/cyclocross-bikes/product-image/484-319/norco-search-xr-c-apex-2019-adventure-road-bike-red-EV337767-3000-1.jpg',2499,'other', 'gravel', false),
 (5,'De Rosa SK Disc','Extremely fast aero','https://chainreactioncycles.scene7.com/is/image/ChainReactionCycles/prod166627_IMGSET?wid=586&hei=498',12499,'road', 'aero', false);
+
+
+
+

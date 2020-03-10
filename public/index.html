@@ -67,11 +67,6 @@
             Messages
           </button>
         </span>
-        <span>
-          <button class="post-item-btn">
-            Post Item
-          </button>
-        </span>
       </div>
 
       <div class="right-buttons">
@@ -91,6 +86,7 @@
         </span>
       </div>
     </nav>
+
     <header id="showcase">
       <h1 class="text-lead">Some Motivational Bullshit to Sell Bikes</h1>
       <p>
@@ -98,8 +94,41 @@
         these damn bikes y'all. Bikes on bikes on bikes.
       </p>
     </header>
+    <section id='new-bike'>
+      <form class="new-bike-form">
+        <div>
+          <label for="bike-model">Bike Model</label>
+          <input type="text" id="bike-model" name="bike-model">
+        </div>
+        <div>
+          <label for="bike-description">Bike Description</label>
+          <textarea name="bike-description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <label for="img-url">Image Link</label>
+          <input type="text" name="img-url" id="img-url">
+        </div>
+        <div>
+          <label for='price'>Price</label>
+          <input type="number" name='price' id='price'>
+        </div>
+        <div>
+          <label for='catagory'>Bike Catagory</label>
+          <select name="catagory" id="catagory">
+            <option value='road'>Road Bike</option>
+            <option value='mountain'>Mountain Bike</option>
+            <option value='other'>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for='disc'>Discipline</label>
+          <input type="text" name="disc" id="disc">
+        </div>
+      </form>
+    </section>
 
     <section id="layout">
+      <button class='show-form-btn btn btn-secondary'>Add New Listing</button>
       <form action="/allbikes" method="GET">
         <button class="all-bikes-btn" type="submit">
           Show All Bikes
