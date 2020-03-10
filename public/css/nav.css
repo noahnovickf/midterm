@@ -42,6 +42,7 @@ nav .middle-buttons span:hover,
 nav .right-buttons span:hover {
   background: #e8e8e8;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 nav .right-buttons span {
@@ -57,8 +58,7 @@ nav .middle-buttons span {
   margin-left: 1rem;
   padding: 0.5rem 0.5rem;
   font-size: 1.25rem;
-  border-radius: 25px;
-  border: 2px solid white;
+  border: none;
 }
 
 nav .middle-buttons span button {
@@ -82,5 +82,36 @@ nav .middle-buttons span button:hover {
 }
 
 nav .right-buttons span button:hover {
+  color: #333;
+}
+
+nav #login-form button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+nav #login-form button:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #333;
+}
+
+nav .logout-btn {
+  display: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+nav .logout-btn:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+  border-radius: 5px;
   color: #333;
 }

@@ -4,10 +4,15 @@ $(() => {
     console.log("bye");
 
     // const featuredBikes = $;
-    $.ajax({ url: "/api", method: "GET" }).then(res => {
-      return renderBikes(res);
-    });
-
+    $.ajax({ url: "/api", method: "GET" })
+      .then(res => {
+        return renderBikes(res);
+      })
+      .then(() => {
+        $(".add-fav-btn").on("click", e => {
+          console.log("works");
+        });
+      });
     const renderBikes = res => {
       $("#bikeDisplay").empty();
       for (let bike of res.bikes) {
@@ -24,8 +29,8 @@ $(() => {
     <p class="card-text">
     ${bike.description}
     </p>
-    <a href="#" class="btn btn-primary">Favourite</a>
-    <a href="#" class="btn btn-primary">Contact Seller</a>
+    <button class="btn btn-primary add-fav-btn">Favourite</button>
+    <button  class="btn btn-primary">Contact Seller</button>
     </div>`;
       card.append(html);
       return card;

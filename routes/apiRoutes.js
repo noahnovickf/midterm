@@ -29,6 +29,7 @@ module.exports = db => {
       2. find all the favourites of the user
       3. return json of favorites
       */
+      res.json({ users });
     });
   });
 
