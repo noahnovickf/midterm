@@ -35,3 +35,46 @@
   color: red;
   font-weight: 700;
 }
+
+#new-bike{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  background: url('../images/bike-form.jpeg') no-repeat center center/cover;
+  color: #f4f4f4;
+  text-align: center;
+}
+
+#new-bike .new-bike-form {
+  padding: 2rem 4rem;
+  background: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  color: #f4f4f4;
+}
+
+#new-bike .new-bike-form label {
+  display: block;
+  font-size: 1.2rem;
+}
+
+#new-bike .new-bike-form textarea {
+  display: block;
+  height: 6rem;
+  resize: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+#new-bike .new-bike-form input {
+  outline: none;
+  border-radius: 5px;
+}
+
+#new-bike .new-bike-form button {
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+

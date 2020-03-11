@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".show-form-btn").click(function() {
-    $("main.container").slideDown("slow", function() {
+    $("main").slideDown("slow", function() {
       $("#new-bike textarea").focus();
     });
   });
