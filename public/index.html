@@ -43,9 +43,11 @@
     <link rel="stylesheet" href="./css/nav.css" type="text/css" />
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-
     <!-- app JS -->
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
 
     <title>Full Cycle</title>
   </head>
@@ -71,7 +73,7 @@
       </div>
 
       <div class="right-buttons">
-        <form id="login-btn" action="/api/login" method="POST">
+        <form id="login-form" action="/api/login" method="POST">
           <input
             type="text"
             id="username"
@@ -96,9 +98,10 @@
       </p>
     </header>
 
-    <main class="container" style="display: none">
+    <main class=new-bike-show style="display: none">
       <section id="new-bike">
         <form class="new-bike-form">
+          <h3>List A Bike</h3>
           <div>
             <label for="bike-model">Bike Model</label>
             <input type="text" id="bike-model" name="bike-model" />
@@ -127,9 +130,11 @@
             <label for="disc">Discipline</label>
             <input type="text" name="disc" id="disc" />
           </div>
+          <button type="submit">Add Bike</button>
         </form>
       </section>
     </main>
+
     <section id="layout">
       <button class="show-form-btn btn btn-secondary">Add New Listing</button>
       <form action="/allbikes" method="GET">
@@ -138,6 +143,34 @@
         </button>
       </form>
     </section>
+
+    <main class="new-email-show" style="display: none">
+      <section id="new-email">
+        <form class="new-email-form" id="email-form" action="/api/email" method="POST">
+
+          <h4>Contact Seller</h4>
+  
+          <div>
+            <label for="email-description">Description</label>
+            <textarea name="bike-description" cols="30" rows="10" placeholder="Description"></textarea>
+          </div>
+          <button
+            type="submit"
+            value="Send Email"
+            onclick="sendEmail()"
+          >
+            Send Email
+          </button>
+        </form>
+      </section>
+    </main>
+
+      <form action="/allbikes" method="GET"></form>
+        <!-- <input type="button" value="Send Email" onclick="sendEmail(from, to)" /> -->
+        <button class="send-email-btn" type="submit">
+          Email Sender
+        </button>
+      </form>
 
     <!-- Dropdown menus -->
     <section id="search-criteria">

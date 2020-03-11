@@ -1,11 +1,48 @@
 const express = require("express");
 const router = express.Router();
 const { getUserID, login } = require("../login");
+// var nodemailer = require("nodemailer");
 
 module.exports = db => {
   router.post("/login", (req, res) => {
     res.cookie("username", req.body.username);
     res.sendStatus(200);
+  });
+
+  // function sendEmail() {
+  //   console.log("sending-email");
+  //   var transporter = nodemailer.createTransport({
+  //     service: "gmail",
+  //     secure: false,
+  //     requireTLS: true,
+  //     auth: {
+  //       user: `john.tests123@gmail.com`,
+  //       pass: `raptors123whitby`
+  //     }
+  //   });
+
+    var mailOptions = {
+      from: `john.tests123@gmail.com`,
+      to: `david.he07@yahoo.ca`,
+      subject: `Sending Email using Node.js`,
+      text: `That was easy!`
+    };
+
+    transporter.sendMail(mailOptions, function(error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`Email sent: ` + info.response);
+      }
+    });
+
+    console.log("clicked");
+  }
+
+  router.post("/email", (req, res) => {
+    // res.cookie("username", req.body.username);
+    // res.sendStatus(300);
+    // sendEmail();
   });
 
   router.get("/favourites", (req, res) => {

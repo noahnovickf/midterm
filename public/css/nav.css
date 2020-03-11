@@ -116,7 +116,3 @@ nav .logout-btn:hover {
   border-radius: 5px;
   color: var(--second-color);
 }
-
-nav .post-item-btn {
-  /* display: none; */
-}
