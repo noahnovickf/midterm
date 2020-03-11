@@ -32,10 +32,10 @@ module.exports = db => {
     });
   });
 
-  router.post("/addbike", (req, res) => {
-    res.send("hi");
-
-    //db.addListing(bikeInfo);
+  router.post("/addbike/", (req, res) => {
+    console.log(req.body.addBikeInfo)
+    // const newBikeData = req.body.data;
+    db.addListing(req.body.addBikeInfo);
   });
 
   router.post("/addfavourites/", (req, res) => {

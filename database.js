@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  user: "user",
+  user: "vagrant",
   password: "123",
   host: "localhost",
   database: "midterm"
@@ -27,8 +27,7 @@ const addListing = bike => {
   return pool
     .query(
       `INSERT INTO bikes (user_id, title, description, image_url, price, category, discipline, featured)
-    Values (3,$2,$3,$4,$5,$6,$7,false)
-    RETURNING *;
+    Values (3,$1,$2,$3,$4,$5,$6,false);
     `,
       [
         bike.title,
@@ -37,7 +36,6 @@ const addListing = bike => {
         bike.price,
         bike.category,
         bike.discipline,
-        bike.featured
       ]
     )
     .then(res => res.rows[0]);
