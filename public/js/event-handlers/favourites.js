@@ -1,41 +1,34 @@
 $(() => {
   $(".favourites-btn").on("click", e => {
     e.preventDefault();
+    callRenderedBikes();
+  });
 
-    // const featuredBikes = $;
+  const callRenderedBikes = () => {
+    console.log("success");
     $.ajax({ url: "/api/favourites", method: "GET" })
       .then(res => {
-        return renderBikes(res);
-      })
-      .then(() => {
-        $(".delete-btn").on("click", e => {
-          console.log("works");
-        });
-      })
-      .then(() => {
-        $(".sold-btn").on("click", e => {});
+        renderBikes(res);
       })
       .then(() => {
         if (document.cookie.slice(9) === "noah%40landlab.ca") {
           $(".admin-btns").css({ display: "inline" });
+          $(".add-fav-btn").css({ display: "none" });
           $(".post-item-btn").css({ display: "inline" });
         }
-      })
-      .then(() => {
-        $(".add-fav-btn").css({ display: "none" });
       });
-
-    const renderBikes = res => {
-      $("#bikeDisplay").empty();
-      for (let bike of res.favBikes) {
-        $("#bikeDisplay").prepend(createBikeCard(bike));
-      }
-    };
-    const createBikeCard = bike => {
-      let card = $('<div class="card">');
-      const html = `    <img src='${bike.image_url}' class="card-img-top${
-        bike.sold ? " grey" : ""
-      }" alt="Bike image" />
+  };
+  const renderBikes = res => {
+    $("#bikeDisplay").empty();
+    for (let bike of res.favBikes) {
+      $("#bikeDisplay").prepend(createBikeCard(bike));
+    }
+  };
+  const createBikeCard = bike => {
+    let card = $('<div class="card">');
+    const html = `    <img src='${bike.image_url}' class="card-img-top${
+      bike.sold ? " grey" : ""
+    }" alt="Bike image" />
       <div class="card-body ">
       
   <h5 class="card-title">${bike.title}</h5>
@@ -58,9 +51,8 @@ $(() => {
     }" class="btn btn-danger sold-btn">Mark Sold</button>
     </div>
     </div>`;
-      card.append(html);
-      return card;
-    };
-    $(".all-bikes-btn").css({ display: "inline-block" });
-  });
+    card.append(html);
+    return card;
+  };
+  $(".all-bikes-btn").css({ display: "inline-block" });
 });
