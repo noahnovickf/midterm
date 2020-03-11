@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  user: "vagrant",
+  user: "user",
   password: "123",
   host: "localhost",
   database: "midterm"
@@ -24,15 +24,13 @@ const getAllBikes = () => {
 };
 
 const addListing = bike => {
-  //LIGHTBNB
   return pool
     .query(
       `INSERT INTO bikes (user_id, title, description, image_url, price, category, discipline, featured)
-    Values ($1,$2,$3,$4,$5,$6,$7,false)
+    Values (3,$2,$3,$4,$5,$6,$7,false)
     RETURNING *;
     `,
       [
-        bike.user_id,
         bike.title,
         bike.description,
         bike.image_url,

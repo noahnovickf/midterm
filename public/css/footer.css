@@ -37,11 +37,6 @@ footer {
   vertical-align: top;
 }
 
-/* Footer left */
-.footer-distributed .footer-left {
-  /* width: 30%; */
-}
-
 /* Footer header */
 .footer-distributed .footer-logo {
   font-size: 2.5rem;
@@ -127,11 +122,6 @@ footer {
 .footer-distributed .footer-center p a {
   color: #e0ac1c;
   text-decoration: none;
-}
-
-/* Footer Right */
-.footer-distributed .footer-right {
-  /* width: 30%; */
 }
 
 .footer-distributed .footer-company-about {

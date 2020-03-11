@@ -1,41 +1,14 @@
 $(() => {
   $(".submit-price-btn").on("click", e => {
     e.preventDefault();
-    console.log("bye");
+    callRenderedBikes();
+  });
 
-    // const featuredBikes = $;
+  const callRenderedBikes = () => {
+    console.log("success");
     $.ajax({ url: "/api", method: "GET" })
       .then(res => {
-        return renderBikes(res);
-      })
-      .then(() => {
-        $(".add-fav-btn").on("click", e => {
-          $.ajax({
-            url: "/api/addfavourites",
-            method: "POST",
-            dataType: "json",
-            data: {
-              bike_id: $(e.currentTarget).data("id")
-            }
-          });
-        });
-      })
-      .then(() => {
-        $(".delete-btn").on("click", e => {
-          $.ajax({
-            url: "/api/deleteBikes",
-            method: "POST",
-            dataType: "json",
-            data: {
-              bike_id: $(e.currentTarget).data("id")
-            }
-          });
-        });
-      })
-      .then(() => {
-        $(".sold-btn").on("click", e => {
-          console.log("works");
-        });
+        renderBikes(res);
       })
       .then(() => {
         if (document.cookie.slice(9) === "noah%40landlab.ca") {
@@ -44,27 +17,28 @@ $(() => {
           $(".post-item-btn").css({ display: "inline" });
         }
       });
+  };
 
-    const renderBikes = res => {
-      let minPrice = 0;
-      let maxPrice = 40000;
-      if (document.querySelector("#min-price").value) {
-        minPrice = document.querySelector("#min-price").value;
-      }
-      if (document.querySelector("#max-price").value) {
-        maxPrice = document.querySelector("#max-price").value;
-      }
-      $("#bikeDisplay").empty();
-      for (let bike of res.bikes) {
-        if (bike.price >= minPrice && bike.price <= maxPrice)
-          $("#bikeDisplay").prepend(createBikeCard(bike));
-      }
-    };
-    const createBikeCard = bike => {
-      let card = $('<div class="card">');
-      const html = `    <img src='${bike.image_url}' class="card-img-top${
-        bike.sold ? " grey" : ""
-      }" alt="Bike image" />
+  const renderBikes = res => {
+    let minPrice = 0;
+    let maxPrice = 40000;
+    if (document.querySelector("#min-price").value) {
+      minPrice = document.querySelector("#min-price").value;
+    }
+    if (document.querySelector("#max-price").value) {
+      maxPrice = document.querySelector("#max-price").value;
+    }
+    $("#bikeDisplay").empty();
+    for (let bike of res.bikes) {
+      if (bike.price >= minPrice && bike.price <= maxPrice)
+        $("#bikeDisplay").prepend(createBikeCard(bike));
+    }
+  };
+  const createBikeCard = bike => {
+    let card = $('<div class="card">');
+    const html = `    <img src='${bike.image_url}' class="card-img-top${
+      bike.sold ? " grey" : ""
+    }" alt="Bike image" />
       <div class="card-body ">
       
   <h5 class="card-title">${bike.title}</h5>
@@ -87,9 +61,8 @@ $(() => {
     }" class="btn btn-danger sold-btn">Mark Sold</button>
     </div>
     </div>`;
-      card.append(html);
-      return card;
-    };
-    $(".all-bikes-btn").css({ display: "inline-block" });
-  });
+    card.append(html);
+    return card;
+  };
+  $(".all-bikes-btn").css({ display: "inline-block" });
 });

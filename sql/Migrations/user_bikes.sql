@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS favourites CASCADE;
+DROP TABLE IF EXISTS bikes CASCADE;
+
+
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   email VARCHAR(255) NOT NULL
@@ -12,7 +17,8 @@ CREATE TABLE bikes(
   price INTEGER NOT NULL DEFAULT 0,
   category VARCHAR(255) NOT NULL,
   discipline VARCHAR (255) NOT NULL,
-  featured boolean DEFAULT false
+  featured boolean DEFAULT false,
+  sold boolean DEFAULT false
 );
 
 CREATE TABLE favourites (

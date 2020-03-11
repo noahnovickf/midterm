@@ -32,12 +32,10 @@ module.exports = db => {
     });
   });
 
-  router.post("/newListing", (req, res) => {
-    db.addListing() //
-      .then(bikes => {
-        res.json({ bikes });
-      })
-      .catch(error => res.status(500).json({ error }));
+  router.post("/addbike", (req, res) => {
+    res.send("hi");
+
+    //db.addListing(bikeInfo);
   });
 
   router.post("/addfavourites/", (req, res) => {

@@ -1,38 +1,15 @@
 $(() => {
-  // const featuredBikes = $;
+  callRenderedBikes();
+});
+const callRenderedBikes = () => {
+  console.log("success");
   $.ajax({ url: "/api", method: "GET" })
     .then(res => {
-      //console.log(res);
-      return renderBikes(res);
-    })
-    .then(() => {
-      $(".add-fav-btn").on("click", e => {
-        $.ajax({
-          url: "/api/addfavourites",
-          method: "POST",
-          dataType: "json",
-          data: {
-            bike_id: $(e.currentTarget).data("id")
-          }
-        });
+      console.log(res);
+      const featuredBikes = res.bikes.filter(bike => {
+        return bike.featured === true;
       });
-    })
-    .then(() => {
-      $(".delete-btn").on("click", e => {
-        $.ajax({
-          url: "/api/deleteBikes",
-          method: "POST",
-          dataType: "json",
-          data: {
-            bike_id: $(e.currentTarget).data("id")
-          }
-        });
-      });
-    })
-    .then(() => {
-      $(".sold-btn").on("click", e => {
-        console.log("works");
-      });
+      renderBikes(featuredBikes);
     })
     .then(() => {
       if (document.cookie.slice(9) === "noah%40landlab.ca") {
@@ -41,20 +18,19 @@ $(() => {
         $(".post-item-btn").css({ display: "inline" });
       }
     });
+};
 
-  const renderBikes = res => {
-    $("#bikeDisplay").empty();
-    for (let bike of res.bikes) {
-      if (bike.featured === true) {
-        $("#bikeDisplay").prepend(createBikeCard(bike));
-      }
-    }
-  };
-  const createBikeCard = bike => {
-    let card = $('<div class="card">');
-    const html = `    <img src='${bike.image_url}' class="card-img-top${
-      bike.sold ? " grey" : ""
-    }" alt="Bike image" />
+const renderBikes = res => {
+  $("#bikeDisplay").empty();
+  for (let bike of res) {
+    $("#bikeDisplay").prepend(createBikeCard(bike));
+  }
+};
+const createBikeCard = bike => {
+  let card = $('<div class="card">');
+  const html = `    <img src='${bike.image_url}' class="card-img-top${
+    bike.sold ? " grey" : ""
+  }" alt="Bike image" />
     <div class="card-body ">
     
 <h5 class="card-title">${bike.title}</h5>
@@ -75,8 +51,6 @@ $(() => {
   }" class="btn btn-danger sold-btn">Mark Sold</button>
   </div>
   </div>`;
-    card.append(html);
-    return card;
-  };
-  $(".all-bikes-btn").css({ display: "inline-block" });
-});
+  card.append(html);
+  return card;
+};
