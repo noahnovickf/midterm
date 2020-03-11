@@ -21,6 +21,8 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+
+
     <script src="./js/event-handlers/featured.js"></script>
     <script src="./js/event-handlers/allbikes.js"></script>
     <script src="./js/event-handlers/filterprice.js"></script>
@@ -28,6 +30,8 @@
     <script src="./js/event-handlers/filtertype.js"></script>
     <script src="./js/event-handlers/login.js"></script>
     <script src="/scripts/client.js"></script>
+    <script src="./js/event-handlers/addNewBike.js"></script>
+    <script src="./js/event-handlers/load-event-handlers.js"></script>
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -100,7 +104,7 @@
 
     <main class=new-bike-show style="display: none">
       <section id="new-bike">
-        <form class="new-bike-form">
+        <form action="/api/addbike" method="POST" class="new-bike-form">
           <h3>List A Bike</h3>
           <div>
             <label for="bike-model">Bike Model</label>
@@ -108,7 +112,11 @@
           </div>
           <div>
             <label for="bike-description">Bike Description</label>
+<<<<<<< HEAD
             <textarea name="bike-description" cols="30" rows="10"></textarea>
+=======
+            <textarea id='bike-description' name="bike-description" cols="30" rows="10"></textarea>
+>>>>>>> master
           </div>
           <div>
             <label for="img-url">Image Link</label>
@@ -119,8 +127,13 @@
             <input type="number" name="price" id="price" />
           </div>
           <div>
+<<<<<<< HEAD
             <label for="catagory">Bike Catagory</label>
             <select name="catagory" id="catagory">
+=======
+            <label for="category">Bike Category</label>
+            <select name="category" id="category">
+>>>>>>> master
               <option value="road">Road Bike</option>
               <option value="mountain">Mountain Bike</option>
               <option value="other">Other</option>
@@ -130,7 +143,11 @@
             <label for="disc">Discipline</label>
             <input type="text" name="disc" id="disc" />
           </div>
+<<<<<<< HEAD
           <button type="submit">Add Bike</button>
+=======
+          <button class ='submit-bike' type="submit">Add Bike</button>
+>>>>>>> master
         </form>
       </section>
     </main>

@@ -1,9 +1,4 @@
 $(() => {
-  $(".all-bikes-btn").on("click", e => {
-    e.preventDefault();
-    callRenderedBikes();
-  });
-
   const callRenderedBikes = () => {
     console.log("success");
     $.ajax({ url: "/api", method: "GET" })
@@ -18,6 +13,47 @@ $(() => {
         }
       });
   };
+  //ADD FAVOURITE
+  $("body").on("click", ".add-fav-btn", e => {
+    console.log("hi");
+    $.ajax({
+      url: "/api/addfavourites",
+      method: "POST",
+      dataType: "json",
+      data: {
+        bike_id: $(e.currentTarget).data("id")
+      },
+      success: callRenderedBikes()
+    });
+  });
+
+  //DELETE
+  $("body").on("click", ".delete-btn", e => {
+    console.log("hi");
+    $.ajax({
+      url: "/api/deleteBikes",
+      method: "POST",
+      dataType: "json",
+      data: {
+        bike_id: $(e.currentTarget).data("id")
+      },
+      success: callRenderedBikes()
+    });
+  });
+
+  //SOLD
+  $("body").on("click", ".sold-btn", e => {
+    console.log("hi");
+    $.ajax({
+      url: "/api/sold",
+      method: "POST",
+      dataType: "json",
+      data: {
+        bike_id: $(e.currentTarget).data("id")
+      },
+      success: callRenderedBikes()
+    });
+  });
 
   const renderBikes = res => {
     $("#bikeDisplay").empty();
@@ -56,5 +92,5 @@ $(() => {
     card.append(html);
     return card;
   };
-  $(".all-bikes-btn").css({ display: "none" });
+  $(".all-bikes-btn").css({ display: "inline-block" });
 });

@@ -69,12 +69,10 @@ module.exports = db => {
     });
   });
 
-  router.post("/newListing", (req, res) => {
-    db.addListing() //
-      .then(bikes => {
-        res.json({ bikes });
-      })
-      .catch(error => res.status(500).json({ error }));
+  router.post("/addbike/", (req, res) => {
+    console.log(req.body.addBikeInfo)
+    // const newBikeData = req.body.data;
+    db.addListing(req.body.addBikeInfo);
   });
 
   router.post("/addfavourites/", (req, res) => {

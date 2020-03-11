@@ -24,22 +24,18 @@ const getAllBikes = () => {
 };
 
 const addListing = bike => {
-  //LIGHTBNB
   return pool
     .query(
       `INSERT INTO bikes (user_id, title, description, image_url, price, category, discipline, featured)
-    Values ($1,$2,$3,$4,$5,$6,$7,false)
-    RETURNING *;
+    Values (3,$1,$2,$3,$4,$5,$6,false);
     `,
       [
-        bike.user_id,
         bike.title,
         bike.description,
         bike.image_url,
         bike.price,
         bike.category,
         bike.discipline,
-        bike.featured
       ]
     )
     .then(res => res.rows[0]);
