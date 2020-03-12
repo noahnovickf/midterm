@@ -1,28 +1,3 @@
-// $(() => {
-//   $(".submit-bike").on("click", e => {
-//     e.preventDefault();
-//     const addBikeInfo = {
-//       title: $("#bike-model").val(),
-//       description: $("#bike-description").val(),
-//       image_url: $("#img-url").val(),
-//       price: Number($("#price").val()),
-//       category: $("#category").val(),
-//       discipline: $("#disc").val()
-//     };
-//     $.ajax({
-//       url: "/api/addbike",
-//       method: "POST",
-//       dataType: "json",
-//       data: { addBikeInfo }
-//     });
-//     console.log(addBikeInfo);
-//     console.log("renderrrr");
-//     callRenderedBikes();
-//     console.log("sliddddee");
-//     $("main").slideToggle("slow");
-//   });
-// });
-
 $(() => {
   $(".submit-bike").on("click", e => {
     e.preventDefault();
@@ -39,15 +14,15 @@ $(() => {
       method: "POST",
       dataType: "json",
       data: { addBikeInfo },
-      complete:
+      complete: () => {
         $("#bike-model").val("") &&
-        $("#bike-description").val("") &&
-        $("#img-url").val("") &&
-        $("#price").val("") &&
-        $("#disc").val("")
+          $("#bike-description").val("") &&
+          $("#img-url").val("") &&
+          $("#price").val("") &&
+          $("#disc").val("") &&
+          callRenderedBikes();
+      }
     });
-    callRenderedBikes();
-    console.log("sliddddee");
     $("main").slideToggle("slow");
   });
 

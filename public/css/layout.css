@@ -31,4 +31,13 @@
   padding: 0.6rem 0.6rem;
   margin-left: 5rem;
   margin-top: 1rem;
+  display: none;
+}
+
+div .delete-btn {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+div .sold-btn {
+  margin-top: 10px;
 }
