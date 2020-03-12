@@ -2,10 +2,9 @@ $(() => {
   callRenderedBikes();
 });
 const callRenderedBikes = () => {
-  console.log("success");
   $.ajax({ url: "/api", method: "GET" })
     .then(res => {
-      console.log(res);
+      console.log("hittinghere");
       const featuredBikes = res.bikes.filter(bike => {
         return bike.featured === true;
       });

@@ -33,8 +33,6 @@ module.exports = db => {
   });
 
   router.post("/addbike/", (req, res) => {
-    console.log(req.body.addBikeInfo)
-    // const newBikeData = req.body.data;
     db.addListing(req.body.addBikeInfo);
   });
 

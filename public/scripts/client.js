@@ -4,6 +4,4 @@ $(document).ready(function() {
       $("#new-bike textarea").focus();
     });
   });
-
-  // $("#new-bike").hide();
 });

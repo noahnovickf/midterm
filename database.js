@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  user: "vagrant",
+  user: "user",
   password: "123",
   host: "localhost",
   database: "midterm"
@@ -35,7 +35,7 @@ const addListing = bike => {
         bike.image_url,
         bike.price,
         bike.category,
-        bike.discipline,
+        bike.discipline
       ]
     )
     .then(res => res.rows[0]);
