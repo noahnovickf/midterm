@@ -63,6 +63,7 @@ nav .middle-buttons span {
 }
 
 nav .middle-buttons span button {
+  display: none;
   border: none;
   outline: none;
   background-color: transparent;

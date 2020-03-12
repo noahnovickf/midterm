@@ -4,10 +4,4 @@ $(document).ready(function() {
       $("#new-bike textarea").focus();
     });
   });
-
-  $(".send-email-btn").click(function() {
-    $("main.new-email-show").slideToggle("slow", function() {
-      $("#new-email textarea").focus();
-    });
-  });
 });

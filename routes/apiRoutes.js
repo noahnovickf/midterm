@@ -35,7 +35,7 @@ module.exports = db => {
   //     }
   //   });
 
-  //   console.log("clicked");
+  //   console.log("clicked");send-sms
   // }
 
   // router.post("/email", (req, res) => {
@@ -69,8 +69,6 @@ module.exports = db => {
   });
 
   router.post("/addbike/", (req, res) => {
-    console.log(req.body.addBikeInfo);
-    // const newBikeData = req.body.data;
     db.addListing(req.body.addBikeInfo);
   });
 

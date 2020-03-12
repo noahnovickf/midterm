@@ -1,6 +1,5 @@
 $(() => {
   const callRenderedBikes = () => {
-    console.log("success");
     $.ajax({ url: "/api", method: "GET" })
       .then(res => {
         return renderBikes(res);
@@ -15,7 +14,6 @@ $(() => {
   };
   //ADD FAVOURITE
   $("body").on("click", ".add-fav-btn", e => {
-    console.log("hi");
     $.ajax({
       url: "/api/addfavourites",
       method: "POST",
@@ -23,13 +21,12 @@ $(() => {
       data: {
         bike_id: $(e.currentTarget).data("id")
       },
-      success: callRenderedBikes()
+      complete: alert("Bike added to Favourites")
     });
   });
 
   //DELETE
   $("body").on("click", ".delete-btn", e => {
-    console.log("hi");
     $.ajax({
       url: "/api/deleteBikes",
       method: "POST",
@@ -37,13 +34,12 @@ $(() => {
       data: {
         bike_id: $(e.currentTarget).data("id")
       },
-      success: callRenderedBikes()
+      complete: callRenderedBikes
     });
   });
 
   //SOLD
   $("body").on("click", ".sold-btn", e => {
-    console.log("hi");
     $.ajax({
       url: "/api/sold",
       method: "POST",
@@ -51,7 +47,7 @@ $(() => {
       data: {
         bike_id: $(e.currentTarget).data("id")
       },
-      success: callRenderedBikes()
+      complete: callRenderedBikes
     });
   });
 

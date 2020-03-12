@@ -35,7 +35,7 @@ const addListing = bike => {
         bike.image_url,
         bike.price,
         bike.category,
-        bike.discipline,
+        bike.discipline
       ]
     )
     .then(res => res.rows[0]);
