@@ -86,15 +86,16 @@ nav .right-buttons span button:hover {
   color: var(--second-color);
 }
 
-nav #login-btn button {
+nav .login-btn {
   border: none;
   outline: none;
   background-color: transparent;
   border-color: var(--main-bg-color);
   color: var(--main-bg-color);
+  margin-left: 1rem;
 }
 
-nav #login-btn button:hover {
+nav .login-btn:hover {
   background: var(--first-color);
   cursor: pointer;
   border-radius: 5px;

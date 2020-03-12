@@ -7,13 +7,12 @@
   margin-top: 3em;
 }
 
-button.all-bikes-btn {
+#layout .all-bikes-btn {
   font-size: 1.25rem;
   border-radius: 10px;
   border: none;
-
   background-color: #007bff;
-  color: white;
+  color: #f4f4f4;
   padding: 0.6rem 0.6rem;
   margin-left: 5rem;
   margin-top: 1rem;
@@ -21,4 +20,15 @@ button.all-bikes-btn {
 
 .admin-btns {
   display: none;
+}
+
+#layout .show-form-btn {
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #666;
+  color: #f4f4f4;
+  padding: 0.6rem 0.6rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
 }
