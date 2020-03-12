@@ -32,6 +32,8 @@
     <script src="/scripts/client.js"></script>
     <script src="./js/event-handlers/addNewBike.js"></script>
     <script src="./js/event-handlers/load-event-handlers.js"></script>
+    <script src="../send-sms.js"></script>
+    
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -47,14 +49,16 @@
     <link rel="stylesheet" href="./css/nav.css" type="text/css" />
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <link rel="stylesheer" href="./css/new-bike.css" type="text-css" />
-
+    
     <!-- app JS -->
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
 
     <title>Full Cycle</title>
   </head>
-  <body>
+  <body>/* .container {
+    max-width: 1100px;
+  } */
+  
     <!-- Top nav bar (fixed) -->
     <nav>
       <h2 class="nav-logo">
@@ -94,9 +98,9 @@
     </nav>
 
     <header id="showcase">
-      <h1 class="text-lead">Some Motivational Bullshit to Sell Bikes</h1>
+      <h1 class="text-lead">Some Motivational Nonsense to Sell Bikes</h1>
       <p>
-        Some more bullshit to sell some bikes. we are a user to user service get
+        Some more nonsense to sell some bikes. we are a user to user service get
         these damn bikes y'all. Bikes on bikes on bikes.
       </p>
     </header>
@@ -172,14 +176,14 @@
           </div>
         </div>
         <form action="/pricerange" method="GET">
-          <label for="min-price">Min Price</label>
+          <label for="min-price">Min Price:</label>
           <input
             type="number"
             name="min-price"
             id="min-price"
             placeholder="Enter price"
           />
-          <label for="max-price">Max Price</label>
+          <label for="max-price">Max Price:</label>
           <input
             type="number"
             name="max-price"
@@ -189,24 +193,14 @@
           <button class="submit-price-btn" type="submit">Submit</button>
         </form>
       </div>
+      <button class="send-sms-btn">Send SMS</button>
     </section>
     <!-- Page-specific (main) content here -->
 
-    <main id="bikeDisplay" class="container-fluid text-center"></main>
-
-    <div class="head"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-
+    <main id="bikeDisplay" class="container-fluid text-center">
+      <button class="send-sms-btn">Send SMS</button>
+    </main>
+    
     <footer class="footer-distributed">
       <div class="footer-left">
         <h1 class="footer-logo">
@@ -214,9 +208,9 @@
           <i class="fas fa-bicycle"></i>
         </h1>
         <!-- <img src="img/logo.png" />
-        <h3>About<span>Eduonix</span></h3> -->
-
-        <p class="footer-links">
+          <h3>About<span>Eduonix</span></h3> -->
+          
+          <p class="footer-links">
           <a>Home</a>
           |
           <a>Blog</a>
@@ -225,18 +219,18 @@
           |
           <a>Contact</a>
         </p>
-
+        
         <p class="footer-company-name">
           © 2020 Full Cycle
         </p>
       </div>
-
+      
       <div class="footer-center">
         <div>
           <i class="fa fa-map-marker"></i>
           <p><span>401 St Laurent Blvd</span> Ottawa, ON</p>
         </div>
-
+        
         <div>
           <i class="fa fa-phone"></i>
           <p>416-967-1111</p>
@@ -260,5 +254,17 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
-</html>
+  </html>
+  
