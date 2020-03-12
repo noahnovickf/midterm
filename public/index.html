@@ -22,16 +22,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 
-
-    <script src="./js/event-handlers/featured.js"></script>
+    <script src="./js/event-handlers/load-event-handlers.js"></script>
+    <script src="./js/event-handlers/addNewBike.js"></script>
     <script src="./js/event-handlers/allbikes.js"></script>
     <script src="./js/event-handlers/filterprice.js"></script>
+
     <script src="./js/event-handlers/favourites.js"></script>
     <script src="./js/event-handlers/filtertype.js"></script>
     <script src="./js/event-handlers/login.js"></script>
     <script src="/scripts/client.js"></script>
-    <script src="./js/event-handlers/addNewBike.js"></script>
-    <script src="./js/event-handlers/load-event-handlers.js"></script>
+    <script src="./js/event-handlers/featured.js"></script>
+
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -106,15 +107,20 @@
         <form action="/api/addbike" method="POST" class="new-bike-form">
           <h3>List A Bike</h3>
           <div>
-            <label for="bike-model">Bike Model</label>
+            <label for="title">Bike Model</label>
             <input type="text" id="bike-model" name="bike-model" />
           </div>
           <div>
-            <label for="bike-description">Bike Description</label>
-            <textarea id='bike-description' name="bike-description" cols="30" rows="10"></textarea>
+            <label for="description">Bike Description</label>
+            <textarea
+              id="bike-description"
+              name="bike-description"
+              cols="30"
+              rows="10"
+            ></textarea>
           </div>
           <div>
-            <label for="img-url">Image Link</label>
+            <label for="url">Image Link</label>
             <input type="text" name="img-url" id="img-url" />
           </div>
           <div>
@@ -133,7 +139,7 @@
             <label for="disc">Discipline</label>
             <input type="text" name="disc" id="disc" />
           </div>
-          <button class ='submit-bike' type="submit">Add Bike</button>
+          <button class="submit-bike" type="submit">Add Bike</button>
         </form>
       </section>
     </main>

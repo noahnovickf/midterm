@@ -36,19 +36,19 @@
   font-weight: 700;
 }
 
-#new-bike{
+#new-bike {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:100vh;
-  background: url('../images/bike-form.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  background: url("../images/bike-form.jpeg") no-repeat center center/cover;
   color: #f4f4f4;
   text-align: center;
 }
 
 #new-bike .new-bike-form {
   padding: 2rem 4rem;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   color: #f4f4f4;
 }
@@ -76,5 +76,3 @@
   border-radius: 5px;
   padding: 1rem;
 }
-
-
