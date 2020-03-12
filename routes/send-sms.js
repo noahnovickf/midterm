@@ -13,8 +13,8 @@ router.post("/send", (req, res) => {
   return client.messages
     .create({
       body: req.body.message,
-      from: "",
-      to: "+16479877506"
+      from: "+",
+      to: "+12899271833"
     })
     .then(message => console.log(message.sid))
     .then(() => {

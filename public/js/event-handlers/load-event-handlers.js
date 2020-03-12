@@ -47,9 +47,15 @@ $(() => {
       data: {
         bike_id: $(e.currentTarget).data("id")
       },
+      success: $.ajax({
+        url: '/api/sms/send',
+        method: 'POST',
+        dataType: 'json',
+        data: { message: `You sold your ${$(e.currentTarget).data("name")} for $${$(e.currentTarget).data("price")}`}
+    }),
       complete: callRenderedBikes
-    });
-  });
+  })
+})
 
   const renderBikes = res => {
     $("#bikeDisplay").empty();
@@ -77,12 +83,8 @@ $(() => {
     <button  class="btn btn-primary">Contact Seller</button>
     </div>
     <div class="admin-btns">
-    <button data-id="${
-      bike.id
-    }" class="btn btn-danger delete-btn">Delete</button>
-    <button data-id="${
-      bike.id
-    }" class="btn btn-danger sold-btn">Mark Sold</button>
+    <button data-id="${bike.id}" class="btn btn-danger delete-btn">Delete</button>
+    <button data-id="${bike.id}" data-price="${bike.price}" data-name="${bike.title}" class="btn btn-danger sold-btn">Mark Sold</button>
     </div>
     </div>`;
     card.append(html);
