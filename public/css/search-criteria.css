@@ -7,27 +7,35 @@
   margin-bottom: 2rem;
 }
 
-#search-criteria .dropdowns .btn-group {
-  margin: 2rem 2rem 2rem 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  /* position: relative;
-  display: inline-block; */
-}
-
 #search-criteria .dropdowns {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-label {
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+#search-criteria label {
+  margin: 1rem;
+  font-size: 1.5rem;
 }
 
 .bike-selection {
   background-color: transparent;
   border: 0px;
+}
+
+#search-criteria .submit-price-btn {
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #666;
+  color: #f4f4f4;
+  margin-left: 0.75rem;
+  padding: 0.5rem;
+}
+
+#search-criteria input {
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border: 1px solid #333;
 }
