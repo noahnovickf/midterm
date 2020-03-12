@@ -112,11 +112,7 @@
           </div>
           <div>
             <label for="bike-description">Bike Description</label>
-<<<<<<< HEAD
-            <textarea name="bike-description" cols="30" rows="10"></textarea>
-=======
             <textarea id='bike-description' name="bike-description" cols="30" rows="10"></textarea>
->>>>>>> master
           </div>
           <div>
             <label for="img-url">Image Link</label>
@@ -127,13 +123,8 @@
             <input type="number" name="price" id="price" />
           </div>
           <div>
-<<<<<<< HEAD
-            <label for="catagory">Bike Catagory</label>
-            <select name="catagory" id="catagory">
-=======
             <label for="category">Bike Category</label>
             <select name="category" id="category">
->>>>>>> master
               <option value="road">Road Bike</option>
               <option value="mountain">Mountain Bike</option>
               <option value="other">Other</option>
@@ -143,11 +134,7 @@
             <label for="disc">Discipline</label>
             <input type="text" name="disc" id="disc" />
           </div>
-<<<<<<< HEAD
-          <button type="submit">Add Bike</button>
-=======
           <button class ='submit-bike' type="submit">Add Bike</button>
->>>>>>> master
         </form>
       </section>
     </main>
@@ -161,22 +148,22 @@
       </form>
     </section>
 
-    <main class="new-email-show" style="display: none">
-      <section id="new-email">
-        <form class="new-email-form" id="email-form" action="/api/email" method="POST">
+    <main class="new-message-show" style="display: none">
+      <section id="new-message">
+        <form class="new-message-form" id="message-form" action="/api/message" method="POST">
 
           <h4>Contact Seller</h4>
   
           <div>
-            <label for="email-description">Description</label>
+            <label for="message-description">Description</label>
             <textarea name="bike-description" cols="30" rows="10" placeholder="Description"></textarea>
           </div>
           <button
             type="submit"
-            value="Send Email"
+            value="Send Message"
             onclick="sendEmail()"
           >
-            Send Email
+            Send Message
           </button>
         </form>
       </section>
@@ -184,8 +171,8 @@
 
       <form action="/allbikes" method="GET"></form>
         <!-- <input type="button" value="Send Email" onclick="sendEmail(from, to)" /> -->
-        <button class="send-email-btn" type="submit">
-          Email Sender
+        <button class="send-message-btn" type="submit">
+          Message Sender
         </button>
       </form>
 

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { getUserID, login } = require("../login");
-// var nodemailer = require("nodemailer");
 
 module.exports = db => {
   router.post("/login", (req, res) => {
@@ -21,29 +20,29 @@ module.exports = db => {
   //     }
   //   });
 
-    var mailOptions = {
-      from: `john.tests123@gmail.com`,
-      to: `david.he07@yahoo.ca`,
-      subject: `Sending Email using Node.js`,
-      text: `That was easy!`
-    };
+  //   var mailOptions = {
+  //     from: `john.tests123@gmail.com`,
+  //     to: `david.he07@yahoo.ca`,
+  //     subject: `Sending Email using Node.js`,
+  //     text: `That was easy!`
+  //   };
 
-    transporter.sendMail(mailOptions, function(error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(`Email sent: ` + info.response);
-      }
-    });
+  //   transporter.sendMail(mailOptions, function(error, info) {
+  //     if (error) {
+  //       console.log(error);
+  //     } else {
+  //       console.log(`Email sent: ` + info.response);
+  //     }
+  //   });
 
-    console.log("clicked");
-  }
+  //   console.log("clicked");
+  // }
 
-  router.post("/email", (req, res) => {
-    // res.cookie("username", req.body.username);
-    // res.sendStatus(300);
-    // sendEmail();
-  });
+  // router.post("/email", (req, res) => {
+  // res.cookie("username", req.body.username);
+  // res.sendStatus(300);
+  // sendEmail();
+  // });
 
   router.get("/favourites", (req, res) => {
     let userEmail = decodeURIComponent(req.headers.cookie.slice(9));
@@ -70,7 +69,7 @@ module.exports = db => {
   });
 
   router.post("/addbike/", (req, res) => {
-    console.log(req.body.addBikeInfo)
+    console.log(req.body.addBikeInfo);
     // const newBikeData = req.body.data;
     db.addListing(req.body.addBikeInfo);
   });
