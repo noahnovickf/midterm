@@ -70,6 +70,7 @@ module.exports = db => {
 
   router.post("/addbike/", (req, res) => {
     db.addListing(req.body.addBikeInfo);
+    res.send("OK");
   });
 
   router.post("/addfavourites/", (req, res) => {

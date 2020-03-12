@@ -118,3 +118,14 @@ nav .logout-btn:hover {
   border-radius: 5px;
   color: var(--second-color);
 }
+
+nav #logged-in {
+  color: white;
+  display: none;
+  font-size: smaller;
+}
+
+nav #logged-in:hover {
+  background-color: transparent;
+  cursor: default;
+}
