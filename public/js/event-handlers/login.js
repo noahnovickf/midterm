@@ -14,6 +14,7 @@ $(() => {
         $(".show-form-btn").css({ display: "inline" });
         $("#logged-in").css({ display: "inline" });
         $(".show-msg").css({ display: "inline" });
+
         $("#logged-in").text(
           `Logged in ${decodeURIComponent(document.cookie.slice(9))}`
         );
