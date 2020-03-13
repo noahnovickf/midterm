@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const ID = "";
-const token = "";
+const ID = "AC";
+const token = "123";
 const client = require("twilio")(ID, token);
 // console.log(
 //   "environment",
@@ -13,8 +13,8 @@ router.post("/send", (req, res) => {
   return client.messages
     .create({
       body: req.body.message,
-      from: "",
-      to: "+16479877506"
+      from: "+123",
+      to: "+12899271833"
     })
     .then(message => console.log(message.sid))
     .then(() => {
