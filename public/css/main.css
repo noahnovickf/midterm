@@ -36,6 +36,23 @@
   font-weight: 700;
 }
 
+
+.send-btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.message-area textarea {
+  margin-top: 0.5rem;
+  resize: none;
+  outline: none;
+  border-radius: 5px;
+  width: 60%;
+}
+
+
+
 #new-bike {
   display: flex;
   justify-content: center;

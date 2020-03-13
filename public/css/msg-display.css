@@ -1,11 +1,41 @@
+.display-user-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+
+}
+
 #msg-display {
   display: none;
 }
 
-.message-area {
-  display: inline;
+#msg-display .msg {
+text-align: center;
+display: inline-block;
+background: #f4f4f4;
+border: 1px dashed #333;
+border-bottom: 1px solid #333;
+border-top: 1px solid #333;
+width: 100%;
+padding-top: 0.75rem;
 }
 
-.send-btn {
-  display: block;
+#msg-display .msg h5 {
+  background: #999;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+#msg-display .msg p {
+  font-size: 1.3rem;
+  color: #333;
+  text-align: left;
+  padding: 0 0.5rem;
+}
+
+.message-area {
+  display: inline;
 }

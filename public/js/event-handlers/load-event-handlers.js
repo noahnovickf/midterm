@@ -106,7 +106,7 @@ $(() => {
     <div class="user-btns">
     <button data-id="${
       bike.id
-    }" class="btn btn-primary add-fav-btn">Favourite</button>
+    }" class="btn btn-success add-fav-btn">Favourite</button>
 
     </div>
     <div class="admin-btns">
@@ -121,7 +121,7 @@ $(() => {
   <form action="/sendmsg" method="POST">
 <textarea id="${
       bike.id
-    }" class="message" placeholder="Send Message to Owner"></textarea>
+    }" class="message" placeholder="Send Message to Owner" rows='3'></textarea>
 <button class="btn btn-primary send-btn" data-id="${bike.id}">Send</button>
 </form>
 </div>

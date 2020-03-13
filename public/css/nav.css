@@ -40,12 +40,12 @@ nav .right-buttons {
   list-style: none;
 }
 
-nav .middle-buttons span:hover,
+/* nav .middle-buttons span:hover,
 nav .right-buttons span:hover {
   background: var(--first-color);
   cursor: pointer;
   border-radius: 5px;
-}
+} */
 
 nav .right-buttons span {
   margin-right: 0.5em;
@@ -81,10 +81,18 @@ nav .right-buttons span button {
 
 nav .middle-buttons span button:hover {
   color: var(--second-color);
+  background: var(--first-color);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.75rem;
 }
 
 nav .right-buttons span button:hover {
   color: var(--second-color);
+  background: var(--first-color);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.75rem;
 }
 
 nav .login-btn {
