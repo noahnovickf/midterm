@@ -24,12 +24,18 @@ PSQL - Database
 
 ## Authors
 
-Noah Novick-Faille - Full-Stack
-Kevin Guertin - Full-Stack, Design
+# Noah Novick-Faille - Full-Stack
+
+# Kevin Guertin - Full-Stack, Design
+
 David He - Design
 
 ## Screenshots
 
+### Homepage
+
 !["View of Homepage"](https://github.com/noahnovickf/midterm/blob/master/public/images/Screen%20Shot%202020-03-13%20at%2010.52.02%20AM.png)
+
+### New Bike form
 
 !["View of add bike form"](https://github.com/noahnovickf/midterm/blob/master/public/images/Screen%20Shot%202020-03-13%20at%2010.52.27%20AM.png)
