@@ -1,0 +1,11 @@
+#msg-display {
+  display: none;
+}
+
+.message-area {
+  display: inline;
+}
+
+.send-btn {
+  display: block;
+}
