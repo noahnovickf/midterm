@@ -41,3 +41,15 @@ div .delete-btn {
 div .sold-btn {
   margin-top: 10px;
 }
+
+.show-msg {
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #666;
+  color: #f4f4f4;
+  padding: 0.6rem 0.6rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  display: none;
+}

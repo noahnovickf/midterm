@@ -41,13 +41,23 @@ const createBikeCard = bike => {
   <button data-id="${
     bike.id
   }" class="btn btn-primary add-fav-btn">Favourite</button>
-  <button  class="btn btn-primary">Contact Seller</button>
+  
   </div>
   <div class="admin-btns">
   <button data-id="${bike.id}" class="btn btn-danger delete-btn">Delete</button>
-  <button data-id="${bike.id}" data-price="${bike.price}" data-name="${bike.title}" class="btn btn-danger sold-btn">Mark Sold</button>
+  <button data-id="${bike.id}" data-price="${bike.price}" data-name="${
+    bike.title
+  }" class="btn btn-danger sold-btn">Mark Sold</button>
   </div>
-  </div>`;
+  <div class="message-area">
+<form action="/sendmsg" method="POST">
+<textarea id="${
+    bike.id
+  }" class="message" placeholder="Send Message to Owner"></textarea>
+<button class="btn btn-primary send-btn" data-id="${bike.id}">Send</button>
+</form>
+</div>
+</div>`;
   card.append(html);
   return card;
 };

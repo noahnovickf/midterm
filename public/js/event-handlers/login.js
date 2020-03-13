@@ -13,6 +13,7 @@ $(() => {
         $(".favourites-btn").css({ display: "inline" });
         $(".show-form-btn").css({ display: "inline" });
         $("#logged-in").css({ display: "inline" });
+        $(".show-msg").css({ display: "inline" });
         $("#logged-in").text(
           `Logged in ${decodeURIComponent(document.cookie.slice(9))}`
         );
@@ -28,7 +29,9 @@ $(() => {
     $(".logout-btn").css({ display: "none" });
     $(".favourites-btn").css({ display: "none" });
     $(".show-form-btn").css({ display: "none" });
+    $(".show-msg").css({ display: "none" });
     $("#logged-in").css({ display: "none" });
+
     document.cookie =
       "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     callRenderedBikes();

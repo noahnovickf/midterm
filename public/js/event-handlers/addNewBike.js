@@ -23,7 +23,7 @@ $(() => {
           callRenderedBikes();
       }
     });
-    $("main").slideToggle("slow");
+    $("#new-bike").slideToggle("slow");
   });
 
   const callRenderedBikes = () => {

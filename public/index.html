@@ -25,13 +25,14 @@
     <script src="./js/event-handlers/load-event-handlers.js"></script>
     <script src="./js/event-handlers/allbikes.js"></script>
     <script src="./js/event-handlers/featured.js"></script>
+    <script src="./js/event-handlers/login.js"></script>
     <script src="./js/event-handlers/filterprice.js"></script>
     <script src="./js/event-handlers/favourites.js"></script>
     <script src="./js/event-handlers/filtertype.js"></script>
-    <script src="./js/event-handlers/login.js"></script>
     <script src="/scripts/client.js"></script>
     <script src="./js/event-handlers/addNewBike.js"></script>
-    
+    <script src="./js/event-handlers/show-messages.js"></script>
+
     <!-- Bootstrap-->
     <link
       rel="stylesheet"
@@ -47,16 +48,14 @@
     <link rel="stylesheet" href="./css/nav.css" type="text/css" />
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    
+    <link rel="stylesheet" href="./css/msg-display.css" type="text/css" />
+
     <!-- app JS -->
     <link rel="stylesheet" href="./css/search-criteria.css" type="text/css" />
 
     <title>Full Cycle</title>
   </head>
-  <body>/* .container {
-    max-width: 1100px;
-  } */
-  
+  <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <h2 class="nav-logo">
@@ -89,6 +88,7 @@
             <button type="submit" class="login-btn">Login</button>
           </span>
         </form>
+        <span id="logged-in"></span id="logged-in">
         <span>
           <button class="logout-btn">Logout</button>
         </span>
@@ -103,8 +103,8 @@
       </p>
     </header>
 
-    <main style="display: none">
-      <section id="new-bike">
+
+      <section id="new-bike" style="display: none">
         <form action="/api/addbike" method="POST" class="new-bike-form">
           <h3>List A Bike</h3>
           <div>
@@ -143,7 +143,8 @@
           <button class="submit-bike" type="submit">Add Bike</button>
         </form>
       </section>
-    </main>
+
+    <section id="msg-display"></section>
     <section id="layout">
       <button class="show-form-btn btn btn-secondary">Add New Listing</button>
       <form action="/allbikes" method="GET">
@@ -151,6 +152,7 @@
           Show All Bikes
         </button>
       </form>
+      <button class="show-msg btn btn-secondary">Show All Messages</button>
     </section>
 
     <!-- Dropdown menus -->
@@ -202,7 +204,7 @@
     <main id="bikeDisplay" class="container-fluid text-center">
       <button class="send-sms-btn">Send SMS</button>
     </main>
-    
+
     <footer class="footer-distributed">
       <div class="footer-left">
         <h1 class="footer-logo">
@@ -211,8 +213,8 @@
         </h1>
         <!-- <img src="img/logo.png" />
           <h3>About<span>Eduonix</span></h3> -->
-          
-          <p class="footer-links">
+
+        <p class="footer-links">
           <a>Home</a>
           |
           <a>Blog</a>
@@ -221,18 +223,18 @@
           |
           <a>Contact</a>
         </p>
-        
+
         <p class="footer-company-name">
           © 2020 Full Cycle
         </p>
       </div>
-      
+
       <div class="footer-center">
         <div>
           <i class="fa fa-map-marker"></i>
           <p><span>401 St Laurent Blvd</span> Ottawa, ON</p>
         </div>
-        
+
         <div>
           <i class="fa fa-phone"></i>
           <p>416-967-1111</p>
@@ -268,5 +270,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  </html>
-  
+</html>
