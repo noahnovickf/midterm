@@ -30,6 +30,6 @@ David He - Design
 
 ## Screenshots
 
-!["View of Homepage"]()
+!["View of Homepage"](https://github.com/noahnovickf/midterm/blob/master/public/images/Screen%20Shot%202020-03-13%20at%2010.52.02%20AM.png)
 
-!["View of add bike form"]()
+!["View of add bike form"](https://github.com/noahnovickf/midterm/blob/master/public/images/Screen%20Shot%202020-03-13%20at%2010.52.27%20AM.png)
