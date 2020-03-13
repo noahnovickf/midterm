@@ -70,6 +70,31 @@ module.exports = db => {
     });
   });
 
+  router.post("/sendmsg", (req, res) => {
+    let sendMsgData = {
+      message: req.body.msgData.message
+    };
+    console.log(req.body.msgData);
+    const email = req.cookies.username;
+    let userID;
+    db.getAllUsers().then(users => {
+      for (let i of users) {
+        if (email === i.email) {
+          userID = i.id;
+        }
+      }
+    });
+    let recID;
+    db.getUserByBikeID(req.body.msgData.bike_id).then(res => {
+      recID = res;
+      console.log(recID);
+      sendMsgData.rec_ID = recID.user_id;
+      sendMsgData.user_id = userID;
+      console.log(sendMsgData);
+      db.createMsg(sendMsgData);
+    });
+  });
+
   router.get("/", (req, res) => {
     db.getAllBikes()
       .then(bikes => {
@@ -77,5 +102,26 @@ module.exports = db => {
       })
       .catch(error => res.status(500).json({ error }));
   });
+
+  router.get("/showMSG", (req, res) => {
+    const email = req.cookies.username;
+    let userID;
+    db.getAllUsers()
+      .then(users => {
+        for (let i of users) {
+          if (email === i.email) {
+            userID = i.id;
+            console.log(userID);
+          }
+        }
+      })
+      .then(() => {
+        db.getMsg(userID).then(messages => {
+          console.log(messages);
+          res.json({ messages });
+        });
+      });
+  });
+
   return router;
 };

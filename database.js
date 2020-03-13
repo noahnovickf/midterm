@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  user: "vagrant",
+  user: "user",
   password: "123",
   host: "localhost",
   database: "midterm"
@@ -39,6 +39,25 @@ const addListing = bike => {
       ]
     )
     .then(res => res.rows[0]);
+};
+
+const getMsg = userID => {
+  return pool
+    .query(
+      `SELECT msg, users.email FROM messages JOIN users ON sender_id = users.id where rec_id = $1;
+    `,
+      [userID]
+    )
+    .then(res => res.rows);
+};
+
+const createMsg = msgData => {
+  return pool.query(
+    `INSERT INTO messages (msg, rec_id, sender_id)
+  VALUES ($1, $2, $3);
+  `,
+    [msgData.message, msgData.rec_ID, msgData.user_id]
+  );
 };
 
 const filterBikesPrice = options => {
@@ -93,6 +112,18 @@ const getFavouriteBikes = user => {
     .then(res => res.rows);
 };
 
+const getUserByBikeID = bikeID => {
+  return pool
+    .query(
+      `
+  SELECT user_id from bikes where bikes.id = $1;
+  
+  `,
+      [bikeID]
+    )
+    .then(res => res.rows[0]);
+};
+
 const deleteListing = bike => {
   //tiny app
   return pool.query(
@@ -144,5 +175,8 @@ module.exports = {
   filterType,
   getAllUsers,
   findFavourites,
-  markSold
+  markSold,
+  createMsg,
+  getUserByBikeID,
+  getMsg
 };

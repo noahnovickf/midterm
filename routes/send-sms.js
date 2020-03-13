@@ -14,7 +14,7 @@ router.post("/send", (req, res) => {
     .create({
       body: req.body.message,
       from: "+",
-      to: "+12899271833"
+      to: "+"
     })
     .then(message => console.log(message.sid))
     .then(() => {
