@@ -24,8 +24,6 @@ PSQL - Database
 
 ## Authors
 
-### Noah Novick-Faille - Full-Stack
-
 ### Kevin Guertin - Full-Stack/ Design
 
 #### David He - Design
