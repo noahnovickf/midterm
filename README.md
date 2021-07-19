@@ -26,7 +26,7 @@ PSQL - Database
 
 ### Kevin Guertin - Full-Stack/ Design
 
-### David He - Design
+### David He - Full-Stack
 
 ## Screenshots
 
